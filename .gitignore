@@ -77,3 +77,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Secrets
+config
+js/config.js
+
+# build directory
+static
