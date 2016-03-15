@@ -19,8 +19,8 @@
     "build:js-dev": "browserify js/index.js > static/main.js",
     "build:js-dev-watch": "browserify js/index.js > static/main.js",
     "postbuild:js-dev-watch": "node scripts/beep.js",
-    "build:html": "jade jade/index.jade -o static",
-    "build:html-dev": "jade jade/index.jade -P -o static",
+    "build:html": "node scripts/buildHtml.js",
+    "build:html-dev": "node scripts/buildHtml.js -P",
     "build": "npm run build:js && npm run build:html && npm run build:css",
     "build-dev": "npm run build:js-dev && npm run build:html-dev && npm run build:css-dev",
     "build-dev:watch": "npm run prebuild:js-dev && parallelshell \"npm run watch:js\" \"npm run watch:css\" \"npm run watch:html\"",
@@ -48,9 +48,6 @@
         "tether"
       ]
     }
-  },
-  "cssBuild": {
-    "outFile": "static/css/main.css"
   },
   "devDependencies": {
     "bootstrap": "^4.0.0-alpha.2",

@@ -1,8 +1,8 @@
 var concat = require('concat'),
   fs = require('fs-extra'),
-  pjson = require('../package.json'),
+  config = require('../config'),
   files = [],
-  dest = pjson.cssBuild.outFile,
+  dest = config.cssBuild.outFile,
   opCallback = function(success_message) {
   	return function(error) {
       if(error) {

@@ -26,5 +26,55 @@ html(lang="en")
     script(src='main.js')
     link(rel="stylesheet" href="css/main.css")
   body
-    block body
+    .container
+      .row
+        nav.navbar.navbar-fixed-top.navbar-light.bg-faded
+          .hidden-md-up
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsableNavbar')
+            span Surf City AIDS Ride 2016
+          #collapsableNavbar.collapse.navbar-toggleable-sm
+            a.navbar-brand(href='#') Surf City AIDS Ride 2016
+            ul.nav.navbar-nav
+              
+              li(class='nav-item ' + (homeActive ? 'active' : ''))
+                a.nav-link(href="/")
+                  | Home
+                  if homeActive
+                    span.sr-only (current)
+
+              li(class='nav-item ' + (dayOfEventActive ? 'active' : ''))
+                a.nav-link(href="dayOfEvent.html")
+                  | Day of Event
+                  if dayOfEventActive
+                    span.sr-only (current)
+
+              li(class='nav-item ' + (routesActive ? 'active' : ''))
+                a.nav-link(href="routes.html")
+                  | Routes
+                  if routesActive
+                    span.sr-only (current)
+
+              li(class='nav-item ' + (volunteerActive ? 'active' : ''))
+                a.nav-link(href="volunteer.html")
+                  | Volunteer
+                  if volunteerActive
+                    span.sr-only (current)
+
+              li(class='nav-item ' + (sponsorsActive ? 'active' : ''))
+                a.nav-link(href="sponsors.html")
+                  | Sponsors
+                  if sponsorsActive
+                    span.sr-only (current)
+
+              li(class='nav-item ' + (fundraisingActive ? 'active' : ''))
+                a.nav-link(href="fundraising.html")
+                  | Fundraising
+                  if fundraisingActive
+                    span.sr-only (current)
+
+              li.nav-item
+                a.nav-link(href="http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap") About Us
+
+      .row
+        block body
     
