@@ -1,7 +1,95 @@
+/*
+ * Global Elements
+ */
+ 
 body
-  padding-top: 56px
-  font-family: Verdana,Geneva,sans-serif
+  font-family Verdana,Geneva,sans-serif
   
-@media screen and (max-width: 768px)
-  body
-    padding-top: 0px
+h1
+  font-size 3em
+  
+h2
+  font-size 2.5em
+  
+h3
+  font-size 2em
+  
+h4
+  font-size 1.5em
+  
+p
+  margin-bottom 1em
+  
+/*
+ * Bootstrap overrides
+ */
+ 
+.navbar-brand
+  margin-right 40px
+ 
+.card img
+  width 100%
+  
+.list-inline li
+  display inline
+  
+.card-block a
+  margin 10px
+
+
+/*
+ * Layout
+ */
+ 
+#collapsableNavbar
+  @media (max-width: 767px)
+    ul li
+      float none
+      margin-left 0
+
+#pageHeader
+  margin-bottom 10px
+ 
+#footer
+  margin-top 10px
+  padding-top 10px
+  
+#footer h3
+  margin 10px
+
+#footer img
+  width 100%
+    
+#footer address
+  margin 10px
+  
+.facebook
+  color #3B5998
+
+.twitter
+  color #55ACEE
+  
+.instagram
+  color #125688
+  
+/*
+ * Content
+ */
+ 
+#home-header
+  text-align center
+  
+#home-cards
+  padding 10px
+  
+#sponsors img
+  width 80%
+  vertical-align middle
+  
+#sponsors div
+  @media (min-width: 768px) and (max-width: 991px)
+    line-height 200px
+  @media (min-width: 992px) and (max-width: 1199px)
+    line-height 160px
+  @media (min-width: 1200px)
+    line-height 120px

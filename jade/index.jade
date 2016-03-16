@@ -1,4 +1,93 @@
 extends layout.jade
 
-block body
-  h1 Hello World
+block content
+
+  #pageHeader.row
+    #home-header
+      h1 Surf City AIDS Ride
+      h2 Sunday October 9th 2016
+      h3.text-warning Registration Coming Soon
+      h4 Santa Cruz California
+  
+  #home-cards.row
+    .card-columns
+      .card
+        .card-block
+          h4.card-title Day of Event
+        img(src='http://placehold.it/400x150')
+        .card-block
+          p.card-text All rides start at the Santa Cruz County Courthouse.  Registration closes at the start of each ride.
+          a.btn.btn-primary(href='dayOfEvent.html') Learn More
+      
+      .card
+        .card-block
+          h4.card-title Routes
+        img(src='http://placehold.it/400x150')
+        ul.list-group.list-group-flush
+          li.list-group-item
+            a(href='routes.html#route12mile') 12 Miles
+          li.list-group-item
+            a(href='routes.html#route30mile') 30 Miles
+          li.list-group-item
+            a(href='routes.html#route65mile') 65 Miles
+          li.list-group-item
+            a(href='routes.html#route100mile') 100 Miles
+
+      .card
+        .card-block
+          h4.card-title Fundraising
+        img(src='http://placehold.it/400x150')
+        .card-block
+          p.card-text Some kind of tagline to get people really excited to donate money to Encompass.  Yay!
+          a.btn.btn-primary(href='fundraising.html') Learn More
+          a.btn.btn-primary(href='fundraising.html') Join a Team!
+          a.btn.btn-primary(href='fundraising.html') Donate Now!
+
+      .card
+        .card-block
+          h4.card-title Volunteer
+        img(src='http://placehold.it/400x150')
+        .card-block
+          p.card-text Some kind of tagline to get people really excited to volunteer for the Surf City AIDS Ride.  Yay!
+          a.btn.btn-primary(href='volunteer.html') Learn More
+          a.btn.btn-primary(href='volunteer.html') Sign Up Now!
+
+      .card
+        .card-block
+          h4.card-title Sponsors
+        img(src='http://placehold.it/400x150')
+        .card-block
+          p.card-text Some kind of tagline that is super duper thankful for the sponsors of the Surf City AIDS Ride.  Yay!
+          a.btn.btn-primary(href='sponsors.html') View Sponsors
+
+  #sponsors.row
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://adventuresportsjournal.com/')
+        img(src='assets/adventure-sports-journal.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://www.wholefoodsmarket.com/stores/santacruz')
+        img(src='assets/whole-foods.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://epicentercycling.com/')
+        img(src='assets/epicenter-cycling.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://www.bicycletrip.com/')
+        img(src='assets/bicycle-trip.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://www.spokesmanbicycles.com/')
+        img(src='assets/spokesman.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://www.familycycling.com/')
+        img(src='assets/family-cycling-center.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://www.cafeugly.com/Cafeugly/home.html')
+        img(src='assets/ugly-mug.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://bikestationaptos.com/')
+        img(src='assets/bike-station-aptos.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://www.timbuk2.com/')
+        img(src='assets/timbuk2.jpg')
+    .hidden-sm-down.col-md-4.col-lg-3.col-xl-2
+      a(href='http://santacruzcore.com/')
+        img(src='assets/santa-cruz-core-fitness-rehab.jpg')

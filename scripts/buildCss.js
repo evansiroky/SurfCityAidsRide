@@ -38,6 +38,6 @@ fs.copy('./node_modules/font-awesome/fonts',
   './static/fonts',
   opCallback('fonts moved'))
 
-/*fs.copy('assets', 
-    'static/public/assets', 
-    opCallback('assets moved'));*/
+fs.copy('assets', 
+    'static/assets', 
+    opCallback('assets moved'));

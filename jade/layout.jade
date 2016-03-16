@@ -26,14 +26,14 @@ html(lang="en")
     script(src='main.js')
     link(rel="stylesheet" href="css/main.css")
   body
-    .container
-      .row
-        nav.navbar.navbar-fixed-top.navbar-light.bg-faded
+    .container-fluid
+      #nav.row
+        nav.navbar.navbar-light.bg-faded
           .hidden-md-up
-            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsableNavbar')
-            span Surf City AIDS Ride 2016
-          #collapsableNavbar.collapse.navbar-toggleable-sm
-            a.navbar-brand(href='#') Surf City AIDS Ride 2016
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsableNavbar') &#9776;
+            span Surf City AIDS Ride
+          #collapsableNavbar.collapse.navbar-collapse.navbar-toggleable-sm
+            a.hidden-sm-down.navbar-brand(href='#') Surf City AIDS Ride
             ul.nav.navbar-nav
               
               li(class='nav-item ' + (homeActive ? 'active' : ''))
@@ -75,6 +75,30 @@ html(lang="en")
               li.nav-item
                 a.nav-link(href="http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap") About Us
 
-      .row
-        block body
-    
+      block content
+
+      #footer.row.bg-faded
+        .col-sm-12.col-md-6.col-lg-4.text-sm-center
+          h3 Ride Organized By
+          a(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap')
+            img.img-responsive.center-block(src='./assets/encompass-logo.jpg', alt='Encompass logo')
+          address
+            a(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap') Santa Cruz AIDS Project <br/>
+            | 542 Ocean Street <br/>
+            | Santa Cruz, CA 95060 <br/>
+            | 831-427-3900 <br/>
+            a(href='mailto:SCAIDSRide@EncompassCS.org') SCAIDSRide@EncompassCS.org
+        .col-sm-12.col-md-6.col-lg-4
+          img.img-responsive.center-block(src='http://placehold.it/400x200', alt='Surf City AIDS Ride logo')
+        .col-md-12.col-lg-4
+          h4 Follow Us
+          ul.list-inline
+            li
+              a(href='https://www.facebook.com/SurfCityAIDSRide/')
+                i.fa.fa-5x.fa-facebook-official.facebook
+            li
+              a(href='https://twitter.com/surfctyaidsride')
+                i.fa.fa-5x.fa-twitter.twitter
+            li
+              a(href='https://www.instagram.com/surfcityaidsride/')
+                i.fa.fa-5x.fa-instagram.instagram
