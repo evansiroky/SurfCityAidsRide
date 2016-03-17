@@ -16,7 +16,7 @@ mixin each(name)
 doctype html
 html(lang="en")
   head
-    title Surf City AIDS Ride 2016
+    title #{title}
     meta(name='viewport', content='width=device-width, initial-scale=1')
     script(type="text/javascript").
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -28,7 +28,7 @@ html(lang="en")
   body
     .container-fluid
       #nav.row
-        nav.navbar.navbar-light.bg-faded
+        nav#navbar.navbar.navbar-light.bg-faded
           .hidden-md-up
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsableNavbar') &#9776;
             span Surf City AIDS Ride
@@ -36,8 +36,8 @@ html(lang="en")
             a.hidden-sm-down.navbar-brand(href='#') Surf City AIDS Ride
             ul.nav.navbar-nav
               
-              li(class='nav-item ' + (homeActive ? 'active' : ''))
-                a.nav-link(href="/")
+              li(class='nav-item ' + (indexActive ? 'active' : ''))
+                a.nav-link(href="index.html")
                   | Home
                   if homeActive
                     span.sr-only (current)
@@ -75,22 +75,28 @@ html(lang="en")
               li.nav-item
                 a.nav-link(href="http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap") About Us
 
-      block content
+        #page-header.col-xs-12.text-xs-center(style='background-image: url(' + pageHeaderImage + ')')
+          block pageHeader
+
+      #content.row
+        block content
 
       #footer.row.bg-faded
         .col-sm-12.col-md-6.col-lg-4.text-sm-center
           h3 Ride Organized By
-          a(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap')
-            img.img-responsive.center-block(src='./assets/encompass-logo.jpg', alt='Encompass logo')
           address
             a(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap') Santa Cruz AIDS Project <br/>
             | 542 Ocean Street <br/>
             | Santa Cruz, CA 95060 <br/>
             | 831-427-3900 <br/>
             a(href='mailto:SCAIDSRide@EncompassCS.org') SCAIDSRide@EncompassCS.org
+        .col-sm-12.hidden-md-up
+          hr
         .col-sm-12.col-md-6.col-lg-4
           img.img-responsive.center-block(src='http://placehold.it/400x200', alt='Surf City AIDS Ride logo')
-        .col-md-12.col-lg-4
+        .col-sm-12.hidden-lg-up
+          hr
+        .col-md-12.col-lg-4.text-xs-center.text-lg-left
           h4 Follow Us
           ul.list-inline
             li

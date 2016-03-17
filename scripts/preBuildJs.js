@@ -11,7 +11,7 @@ var fs = require('fs-extra'),
     }
   };
 
-var filenameToCopy = (process.argv[2] === '-p' ? 'web.js' : 'web.js');
+var filenameToCopy = (process.argv[2] === '-p' ? 'web.js' : 'webDev.js');
 rimraf('./js/config.js', function() {
   fs.copy('config/' + filenameToCopy, './js/config.js', opCallback('js config copied'));
 });
