@@ -18,6 +18,24 @@ html(lang="en")
   head
     title #{title}
     meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='apple-touch-icon', sizes='57x57', href='assets/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='assets/apple-touch-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='assets/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='assets/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='assets/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='assets/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='assets/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='assets/apple-touch-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='assets/apple-touch-icon-180x180.png')
+    link(rel='icon', type='image/png', href='assets/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='assets/android-chrome-192x192.png', sizes='192x192')
+    link(rel='icon', type='image/png', href='assets/favicon-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href='assets/favicon-16x16.png', sizes='16x16')
+    link(rel='manifest', href='assets/manifest.json')
+    link(rel='mask-icon', href='assets/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='msapplication-TileColor', content='#da532c')
+    meta(name='msapplication-TileImage', content='/mstile-144x144.png')
+    meta(name='theme-color', content='#ffffff')
     script(type="text/javascript").
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -28,12 +46,17 @@ html(lang="en")
   body
     .container-fluid
       #nav.row
-        nav#navbar.navbar.navbar-light.bg-faded
+        nav#navbar.navbar.aids-dark-theme.navbar-dark
           .hidden-md-up
-            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsableNavbar') &#9776;
-            span Surf City AIDS Ride
-          #collapsableNavbar.collapse.navbar-collapse.navbar-toggleable-sm
-            a.hidden-sm-down.navbar-brand(href='#') Surf City AIDS Ride
+            .row
+              #navbar-sm-left.col-xs-2
+                button#navbar-toggler.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsable-navbar') &#9776;
+              #navbar-sm-title.col-xs-10
+                span#nav-mobile-title1 Surf City
+                span#nav-mobile-title2 AIDS Ride
+          #collapsable-navbar.collapse.navbar-collapse.navbar-toggleable-sm
+            a.hidden-sm-down.navbar-brand(href='index.html')
+              img(src='assets/aids_ride_brand-250.png')
             ul.nav.navbar-nav
               
               li(class='nav-item ' + (indexActive ? 'active' : ''))
@@ -48,9 +71,9 @@ html(lang="en")
                   if dayOfEventActive
                     span.sr-only (current)
 
-              li(class='nav-item ' + (routesActive ? 'active' : ''))
-                a.nav-link(href="routes.html")
-                  | Routes
+              li(class='nav-item ' + (trainingActive ? 'active' : ''))
+                a.nav-link(href="training.html")
+                  | Training
                   if routesActive
                     span.sr-only (current)
 
@@ -76,14 +99,22 @@ html(lang="en")
                 a.nav-link(href="http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap") About Us
 
         #page-header.col-xs-12.text-xs-center(style='background-image: url(' + pageHeaderImage + ')')
-          block pageHeader
+          #page-header-content
+            block pageHeader
 
       #content.row
         block content
 
       #footer.row.bg-faded
-        .col-sm-12.col-md-6.col-lg-4.text-sm-center
-          h3 Ride Organized By
+        .col-md-1.hidden-sm-down
+        .col-sm-12.col-md-2
+          a(href='index.html')
+            img(src='assets/icon-333.png')
+        .col-md-1.hidden-sm-down
+        .col-sm-12.hidden-md-up
+          hr
+        .col-sm-12.col-md-4.text-xs-center
+          h4 Ride Organized By
           address
             a(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap') Santa Cruz AIDS Project <br/>
             | 542 Ocean Street <br/>
@@ -92,19 +123,18 @@ html(lang="en")
             a(href='mailto:SCAIDSRide@EncompassCS.org') SCAIDSRide@EncompassCS.org
         .col-sm-12.hidden-md-up
           hr
-        .col-sm-12.col-md-6.col-lg-4
-          img.img-responsive.center-block(src='http://placehold.it/400x200', alt='Surf City AIDS Ride logo')
-        .col-sm-12.hidden-lg-up
-          hr
-        .col-md-12.col-lg-4.text-xs-center.text-lg-left
+        .col-sm-12.col-md-4.text-xs-center
           h4 Follow Us
           ul.list-inline
             li
               a(href='https://www.facebook.com/SurfCityAIDSRide/')
-                i.fa.fa-5x.fa-facebook-official.facebook
+                i.fa.fa-2x.fa-facebook-official.facebook
             li
               a(href='https://twitter.com/surfctyaidsride')
-                i.fa.fa-5x.fa-twitter.twitter
+                i.fa.fa-2x.fa-twitter.twitter
             li
               a(href='https://www.instagram.com/surfcityaidsride/')
-                i.fa.fa-5x.fa-instagram.instagram
+                i.fa.fa-2x.fa-instagram.instagram
+
+        #copyright.col-xs-12.text-xs-center.aids-dark-theme
+          p &copy; Encompass Community Services. All Rights Reserved.

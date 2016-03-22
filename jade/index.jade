@@ -1,14 +1,14 @@
 extends layout.jade
 
 block pageHeader
-  #home-header
-    h1 Surf City AIDS Ride
-    h2 Sunday October 9th 2016
-    h3.text-warning Registration Coming Soon
-    h4 Santa Cruz California    
+  h1 Surf City AIDS Ride
+  h2 Sunday October 9th 2016
+  h3.text-danger Registration Coming Soon
+  h4 Santa Cruz California    
 
 block content
-  .col-xs-12
+  .col-lg-1
+  .col-xs-12.col-lg-10
     
     .row
       #home-photo-credit.col-xs-12
@@ -21,25 +21,22 @@ block content
           .card-block
             h4.card-title Day of Event
           a(href='dayOfEvent.html')
-            img(src='assets/riders2.jpg' alt='Day of Event')
+            img(src='assets/dayOfEvent.jpg' alt='Day of Event')
           .card-block
             p.card-text All rides start at the Santa Cruz County Courthouse.  Registration closes at the start of each ride.
+            p.card-text Choose a route: 12, 30, 65 or 100 miles!
             a.btn.btn-primary(href='dayOfEvent.html') Learn More
+            a.btn.btn-primary(href='dayOfEvent.html#routes') View Routes
         
         .card
           .card-block
-            h4.card-title Routes
-          a(href='routes.html')
-            img(src='assets/100mile.jpg' alt='Routes')
-          ul.list-group.list-group-flush
-            li.list-group-item
-              a(href='routes.html#route12mile') 12 Miles
-            li.list-group-item
-              a(href='routes.html#route30mile') 30 Miles
-            li.list-group-item
-              a(href='routes.html#route65mile') 65 Miles
-            li.list-group-item
-              a(href='routes.html#route100mile') 100 Miles
+            h4.card-title Training Rides
+          a(href='training.html')
+            img(src='assets/training.jpg' alt='Training')
+          .card-block
+            p.card-text Get in shape for the big day with these training rides!
+            a.btn.btn-primary(href='training.html') Learn More
+          
 
         .card
           .card-block
@@ -56,7 +53,7 @@ block content
           .card-block
             h4.card-title Volunteer
           a(href='volunteer.html')
-            img(src='assets/volunteer-card.jpg' alt='Volunteer')
+            img(src='assets/volunteer.jpg' alt='Volunteer')
           .card-block
             p.card-text Some kind of tagline to get people really excited to volunteer for the Surf City AIDS Ride.  Yay!
             a.btn.btn-primary(href='volunteer.html') Learn More

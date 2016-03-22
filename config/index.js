@@ -18,7 +18,7 @@ config.cssBuild.outFile = "static/css/main.css";
 config.html = {}
 config.html.files = []
 
-var pages = ['Home', 'Day of Event', 'Routes', 'Volunteer', 'Sponsors', 'Fundraising'];
+var pages = ['Home', 'Day of Event', 'Training', 'Volunteer', 'Sponsors', 'Fundraising'];
 
 for (var i = 0; i < pages.length; i++) {
   var curPage = pages[i],

@@ -16,21 +16,30 @@ body
   font-family Verdana,Geneva,sans-serif
   
 h1
-  @media(max-width: 767px)
+  @media(max-width: 543px)
+    font-size 1.5em
+    
+  @media(min-width: 544px) and (max-width: 767px)
     font-size 2em
     
   @media(min-width: 768px)
     font-size 3em
   
 h2
-  @media(max-width: 767px)
+  @media(max-width: 543px)
+    font-size 1.25em
+    
+  @media(min-width: 544px) and (max-width: 767px)
     font-size 1.5em
     
   @media(min-width: 768px)
     font-size 2.5em
   
 h3
-  @media(max-width: 767px)
+  @media(max-width: 543px)
+    font-size 1.2em
+    
+  @media(min-width: 544px) and (max-width: 767px)
     font-size 1.3em
     
   @media(min-width: 768px)
@@ -50,8 +59,17 @@ p
  * Bootstrap overrides
  */
  
+.navbar
+  border-radius(0)
+  padding 0
+ 
 .navbar-brand
   margin-right 40px
+  padding 0
+  
+.nav-item
+  font-size 1.2em
+  margin-right 0.4em
  
 .card img
   width 100%
@@ -69,57 +87,110 @@ p
 /*
  * Layout
  */
+
+.aids-dark-theme
+  background-color #9C1F28
+  color #fff
   
+#navbar-toggler
+  float: left
+  
+#navbar-sm-left
+  background-color #C72127
+  
+#navbar-sm-title
+  padding-top 8px
+  height 38px
+  background-color #9C1F28
+  background-image url(../assets/mobile-brand-2.png)
+  background-repeat no-repeat
+  background-position 0px
+  background-size auto 100%
+  
+  span
+    font-size 1.2em
+
+#nav-mobile-title1
+  color #9C1F28
+  font-weight bold
+  margin-left 2em
+  
+#nav-mobile-title2
+  margin-left 0.8em
+  
+#collapsable-navbar 
+  clear both
+  
+  ul
+    @media(min-width: 1095px)
+      padding-top 0.8em
+      
+    li
+      @media (max-width: 767px)
+        float none
+        margin-left 1rem
+
 #page-header
-  min-height 300px
-  padding-top 50px
-  background-size 100%
+  
+  padding 50px 0 0 0
   background-position 0px
   background-repeat no-repeat
+  background-size 100%  
+  min-height 300px
   
   @media(max-width: 543px)
-    padding-left 15px
-    padding-right 15px
+    padding 20px 0 0 0
+    min-height 150px
     
   @media(min-width: 544px) and (max-width: 767px)
-    padding-left 50px
-    padding-right 50px
+    min-height 225px
     
-  @media(min-width: 768px) and (max-width: 1049px)
-    padding-left 100px
-    padding-right 100px
-    
-  @media(min-width: 1050px)
-    padding-left 250px
-    padding-right 250px
-
-#collapsableNavbar
-  @media (max-width: 767px)
-    ul li
-      float none
-      margin-left 0
+#page-header-content
+  padding 2em
+  background-color rgba(255, 255, 255, 0.5)
+  font-weight bold
+  color black
+  
+  @media(max-width: 543px)
+    padding 1em
  
 #footer
   margin-top 10px
   padding-top 10px
-  
-#footer h3
-  margin 10px
-
-#footer img
-  width 100%
+   
+  img
+    padding 10px
+    width 100%
     
-#footer address
-  margin 10px
+  address, ul, h3
+    padding 10px
   
-.facebook
+.fa
+  @media(min-width: 767px)
+    color gray
+  
+.facebook:hover
   color #3B5998
 
-.twitter
+.twitter:hover
   color #55ACEE
   
-.instagram
+.instagram:hover
   color #125688
+
+@media(max-width: 768px)
+  .facebook
+    color #3B5998
+
+  .twitter
+    color #55ACEE
+    
+  .instagram
+    color #125688
+  
+#copyright
+  margin-top 0.7em
+  padding 0.5em
   
 /*
  * Content
@@ -128,18 +199,15 @@ p
 .filler
   padding 2em
  
-#home-header
-  background-color #fff
-  opacity 0.5
-  border-radius(20px)
-  padding 0.5em 0
- 
 #home-photo-credit
   font-size 0.8em
   padding-right 5px
   text-align right
   
 #home-cards
+  padding 10px
+  
+#home-routes-title
   padding 10px
   
 #sponsors img
