@@ -20,6 +20,9 @@ config.html.files = []
 
 var pages = ['Home', 'Day of Event', 'Training', 'Volunteer', 'Sponsors', 'Fundraising'];
 
+var extraPageCfg = {}
+extraPageCfg['Day of Event'] = require('./dayOfEvent.json')
+
 for (var i = 0; i < pages.length; i++) {
   var curPage = pages[i],
     filename = makeFilename(curPage),
@@ -29,6 +32,12 @@ for (var i = 0; i < pages.length; i++) {
     }
 
   cfg[filename + 'Active'] = true;
+
+  if(extraPageCfg[curPage]) {
+    for(k in extraPageCfg[curPage]) {
+      cfg[k] = extraPageCfg[curPage][k]
+    }
+  }
 
   config.html.files.push({
     filename: filename,

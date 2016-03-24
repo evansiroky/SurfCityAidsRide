@@ -1,3 +1,45 @@
+mixin routeHTML(cfg, stations, websafeName)
+  - function websafeName(s) { return s.toLowerCase().replace(' ', '-') }
+  h4(id='route' + cfg.miles)= cfg.miles + ' Mile'
+  h5= cfg.summary
+  .row
+    .col-xs-12.col-md-6
+      p= cfg.description
+      p.reference-list
+        span.support-intro Rest Stops:
+        each stop in cfg.restStops
+          a(href='#' + websafeName(stations[stop].name) + '-rest-stop')= stations[stop].name
+      if cfg.foodStops
+        p.reference-list
+          span.support-intro Food Stops:
+          each stop in cfg.foodStops
+            a(href='#' + websafeName(stations[stop].name) + '-rest-stop')= stations[stop].name
+    .col-xs-12.col-md-6.text-xs-center
+      a(href=cfg.gpsLink)
+        img(src='assets/' + cfg.miles +'-profile.png' alt=cfg.miles + ' Mile Route Elevation Profile')
+      a(href=cfg.gpsLink) View Full Route
+
+mixin restStopHTML(cfg, websafeName)
+  - function websafeName(s) { return s.toLowerCase().replace(' ', '-') }
+  .col-md-12.col-lg-6
+    h4(id=websafeName(cfg.name) + '-rest-stop')= cfg.name
+    table
+      tr
+        td Address
+        td
+          address!= cfg.address + '<br/>' + cfg.city
+      tr
+        td Volunteer Setup Time
+        td= cfg.volunteerInfo
+      tr
+        td Hours open for Riders
+        td= cfg.hours
+      
+    p.reference-list
+      span.support-intro Routes:
+      each route in cfg.routes
+        a(href='#route' + route)= route + ' Mile'
+
 extends layout.jade
 
 block pageHeader
@@ -7,7 +49,7 @@ block content
 
   .row
     .col-xs-1
-    #day-of-event-content.col-xs-10
+    #scar-content.col-xs-10
       h3 Registration
 
       .row
@@ -59,42 +101,19 @@ block content
       hr
       h3#routes Routes
 
-      h4 12 Mile
-      h5 471 feet of climbing, 1 aid station
-      .row
-        .col-xs-12.col-md-6
-          p Easy route for the beginner! NO BIG HILLS! Ride from the Santa Cruz County Courthouse to Capitola Village and back. Fun for cyclists of all skill levels. Ride a beach cruiser, a tandem, your Burning man art bike or a fixie! Wear a costume! Tell everyone to come ride: family, friends, and co-workers! Come ride with various Santa Cruz celebrities!!!
-        .col-xs-12.col-md-6.text-xs-center
-          a(href='http://ridewithgps.com/routes/6559669')
-            img(src='assets/12-profile.png' alt='12 Mile Route Elevation Profile')
-          a(href='http://ridewithgps.com/routes/6559669') View Full Route
+      -var routeId = 0
+      while routeId < 4
+        +routeHTML(routes[routeId++], stations, websafeName)
 
-      h4 30 Mile
-      h5 2,138 feet of climbing, 2 aid stations
+      hr
+      h3 Ride Support and Rest Stops
+      p There will be about 7-9 official vehicles patrolling the routes, which will be equipped with pumps, bike carriers, repair kits, first aid kits, water, communication, and event contact lists, which will also be available at rest stops. There will be a moto safety team consisting of about the same number of official vehicles. Each stop will also have about 4-8 volunteers. Rest stops will each have 2 porta potties unless there is a rest room on site.
+      
       .row
-        .col-xs-12.col-md-6
-          p This fun route hugs the coastline from The Boardwalk to Seacliff. It has beautiful coastal views, a couple easy to moderate climbs and two rest stops. Starting time is 9 am.
-        .col-xs-12.col-md-6.text-xs-center
-          a(href='http://ridewithgps.com/routes/6559672')
-            img(src='assets/30-profile.png' alt='30 Mile Route Elevation Profile')
-          a(href='http://ridewithgps.com/routes/6559672') View Full Route
+        -var stopId = 0
+        while stopId < 7
+          +restStopHTML(stations[stopId++], websafeName)
 
-      h4 65 Mile
-      h5 3,319 feet of climbing, 3 aid stations, 2 food stops
-      .row
-        .col-xs-12.col-md-6
-          p The 65 mile route parallels the century as far as the second pit stop. From there it travels through the beautiful rolling hills of Northern Monterey County among artichokes and strawberries and apple orchards, rejoining the century ride in Aromas for lunch. This route has moderate climbs. Start time is 8 am.
-        .col-xs-12.col-md-6.text-xs-center
-          a(href='http://ridewithgps.com/routes/6559675')
-            img(src='assets/65-profile.png' alt='65 Mile Route Elevation Profile')
-          a(href='http://ridewithgps.com/routes/6559675') View Full Route
-
-      h4 100 Mile
-      h5 4,829 feet of climbing, 5 aid stations, 2 food stops
-      .row
-        .col-xs-12.col-md-6
-          p This is your century route option! It will take you through San Juan Bautista via Moss Landing and San Juan Grade. The century follows wonderful back roads, farmlands, redwood forests and ocean views in Santa Cruz, Monterey and San Benito Counties. An amazing route that hugs the coast and has some challenging climbs! Starting time is 7 am.
-        .col-xs-12.col-md-6.text-xs-center
-          a(href='http://ridewithgps.com/routes/6559676')
-            img(src='assets/100-profile.png' alt='100 Mile Route Elevation Profile')
-          a(href='http://ridewithgps.com/routes/6559676') View Full Route
+      hr
+      h3 Rider Etiquette
+      p This event is a charity bike ride benefitting the Santa Cruz AIDS Project.  It is not a race and is not timed, so just have fun!  Each ride course will follow established roads, and riders must obey traffic laws.  Temporary wayfinding signs will be posted at each turn.  Riders are encouraged to familiarize themselves with the route ahead of time.  
