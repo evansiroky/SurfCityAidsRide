@@ -146,8 +146,20 @@ p
   font-weight bold
   color black
   
-  @media(max-width: 543px)
+  @media(max-width: 767px)
     padding 1em
+    
+  a
+    margin 10px
+    
+    @media(max-width: 767px)
+      padding .5em 1em
+      font-size 1em
+      line-height 1em
+    @media (min-width: 768px)
+      padding .6em 1.1em
+      font-size 1.1em
+      line-height 1.1em
  
 #footer
   margin-top 10px
@@ -265,6 +277,9 @@ p
   @media (min-width: 1200px)
     line-height 120px
     
+.registration-buttons a
+  margin 10px
+    
 .route-divider
   border-style dashed
     
@@ -286,6 +301,19 @@ p
   
 .reference-list-item
   margin-bottom 1em
+  
+#volunteer-google-form
+  height 500px
+  @media (max-width: 544px)
+    width 400px
+  @media (min-width: 543px) and (max-width: 767px)
+    width 500px
+  @media (min-width: 768px) and (max-width: 991px)
+    width 600px
+    height 600px
+  @media (min-width: 992px)
+    width 800px
+    height 700px
     
 #fundraising-buttons a
   margin 10px

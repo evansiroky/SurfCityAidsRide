@@ -3,7 +3,10 @@ extends layout.jade
 block pageHeader
   h1 Surf City AIDS Ride
   h2 Sunday October 9th 2016
-  h3.text-danger Registration Coming Soon
+  .row.text-xs-center
+    .col-xs-12
+      a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsrideregistration') Register to Ride!
+      a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsridefundraising') Register to Fundraise!
   h4 Santa Cruz California    
 
 block content
@@ -25,6 +28,7 @@ block content
           .card-block
             p.card-text All rides start at the Santa Cruz County Courthouse.  Registration closes at the start of each ride.
             p.card-text Choose a route: 12, 30, 65 or 100 miles!
+            a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsrideregistration') Register Now!
             a.btn.btn-primary(href='dayOfEvent.html') Learn More
             a.btn.btn-primary(href='dayOfEvent.html#routes') View Routes
         
@@ -45,9 +49,9 @@ block content
             img(src='assets/jerseys.jpg' alt='Fundraising')
           .card-block
             p.card-text Your support helps to fund services for men, women and children who are HIV positive, as well as prevention and education programs.  Donate today and make a difference!
-            a.btn.btn-primary(href='fundraising.html') Learn More
+            a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsridefundraising') Register to Fundraise!
             a.btn.btn-primary(href='fundraising.html') Join a Team!
-            a.btn.btn-primary(href='fundraising.html') Donate Now!
+            a.btn.btn-primary(href='fundraising.html') Learn More
 
         .card
           .card-block
@@ -57,7 +61,7 @@ block content
           .card-block
             p.card-text It takes a lot to put the Surf City AIDS Ride together. We need your help!  Sign up to volunteer today!
             a.btn.btn-primary(href='volunteer.html') Learn More
-            a.btn.btn-primary(href='volunteer.html') Sign Up Now!
+            a.btn.btn-primary(href='volunteer.html#volunteer-google-form') Sign Up Now!
 
         .card
           .card-block
