@@ -11,10 +11,7 @@ $(function() {
 
   // GA tracking
   analytics('create', config.gaTrackingId, 'auto')
-  analytics('send', 'pageview', {
-    page: '/',
-    title: 'Home'
-  })
+  analytics('send', 'pageview')
 
   var parser = new UAParser(),
     result = parser.getResult(),
@@ -23,8 +20,6 @@ $(function() {
 
   if(os === 'iOS') {
     linkBase = 'maps:q=';
-  } else if(os === 'Android') {
-    linkBase = 'geo:';
   } else if(os === 'Windows Phone' || os === 'Windows Mobile') {
     linkBase = 'maps:';
   }
