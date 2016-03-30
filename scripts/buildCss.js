@@ -36,7 +36,16 @@ concat(files, dest, opCallback('files concatenated'));
 // copy font-awesome fonts
 fs.copy('./node_modules/font-awesome/fonts',
   './static/fonts',
-  opCallback('fonts moved'))
+  opCallback('font-awesome fonts moved'))
+
+// copy SCAR Ride fonts
+fs.walk('./styles/fonts')
+  .on('data', function(item) {
+    fs.copy(item.path,
+      './static/fonts')
+  })
+  .on('end', opCallback('project fonts moved'))
+  
 
 fs.copy('assets', 
     'static/assets', 
