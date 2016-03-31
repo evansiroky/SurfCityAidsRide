@@ -60,89 +60,88 @@ block pageHeader
   h1 Day of Event
 
 block content
+  
+  .col-xs-1
+  .col-xs-10.scar-content
+    h3 Registration
 
-  .row
-    .col-xs-1
-    .col-xs-10.scar-content
-      h3 Registration
+    .row
+      .col-xs-12.col-md-6
+        h4 Online Registration
+        p Register online to avoid waiting in line on the day of the event.  Online registration will close at Midnight on October 6th.  
+        p Please select whether you want to register for just the bike ride or also for the fundraising.  You only need to complete one to be able to ride.  For more information on fundraising, please see the 
+          a(href='fundraising.html') fundraising page
+          | .
+        p.registration-buttons
+          a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsrideregistration') Ride Only
+          a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Ride + Fundraising
+      .col-xs-12.col-md-6
+        h4 Day of Event Registration
+        p It is possible to register to ride on the day of the event.  Registration for each ride will close at the start of each ride.  You can pay using cash, check or credit card on the day of the event.  Please find a registration table and we'll get you signed up!
 
-      .row
-        .col-xs-12.col-md-6
-          h4 Online Registration
-          p Register online to avoid waiting in line on the day of the event.  Online registration will close at Midnight on October 6th.  
-          p Please select whether you want to register for just the bike ride or also for the fundraising.  You only need to complete one to be able to ride.  For more information on fundraising, please see the 
-            a(href='fundraising.html') fundraising page
-            | .
-          p.registration-buttons
-            a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsrideregistration') Ride Only
-            a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsridefundraising') Ride + Fundraising
-        .col-xs-12.col-md-6
-          h4 Day of Event Registration
-          p It is possible to register to ride on the day of the event.  Registration for each ride will close at the start of each ride.  You can pay using cash, check or credit card on the day of the event.  Please find a registration table and we'll get you signed up!
+    hr
+    h3 Start / Finish
+    .row
+      .col-xs-12.col-sm-6.text-xs-center
 
-      hr
-      h3 Start / Finish
-      .row
-        .col-xs-12.col-sm-6.text-xs-center
+        a#map-link(href='http://maps.google.com/maps?q=701+Ocean+St,+Santa+Cruz,+CA')
+          img(src='assets/parking.png' alt='Parking Map')
+          | View in Map      
 
-          a#map-link(href='http://maps.google.com/maps?q=701+Ocean+St,+Santa+Cruz,+CA')
-            img(src='assets/parking.png' alt='Parking Map')
-            | View in Map      
+      .col-xs-12.col-sm-6
+        p The start and finish are at the Santa Cruz County Courthouse.  There is free parking onsite.  Click on the map to get detailed directions.
 
-        .col-xs-12.col-sm-6
-          p The start and finish are at the Santa Cruz County Courthouse.  There is free parking onsite.  Click on the map to get detailed directions.
+        address
+        | Santa Cruz County Courthouse <br/>
+        | 701 Ocean Street <br/>
+        | Santa Cruz, CA 95060
 
-          address
-          | Santa Cruz County Courthouse <br/>
-          | 701 Ocean Street <br/>
-          | Santa Cruz, CA 95060
+    hr
+    h3 Ride Info
+    table
+      tr
+        th Ride Distance
+        th Start Time
+        th Price
+      tr
+        td 100 Mile
+        td 7:00 am
+        td $85
+      tr
+        td 65 Mile
+        td 8:00 am
+        td $85
+      tr
+        td 30 Mile
+        td 9:00 am
+        td $50
+      tr
+        td 12 Mile
+        td 9:00 am
+        td $25
 
-      hr
-      h3 Ride Info
-      table
-        tr
-          th Ride Distance
-          th Start Time
-          th Price
-        tr
-          td 100 Mile
-          td 7:00 am
-          td $85
-        tr
-          td 65 Mile
-          td 8:00 am
-          td $85
-        tr
-          td 30 Mile
-          td 9:00 am
-          td $50
-        tr
-          td 12 Mile
-          td 9:00 am
-          td $25
+    p Start at the appropriate time for your skill level and route length to finish by 5pm!
 
-      p Start at the appropriate time for your skill level and route length to finish by 5pm!
+    hr
+    h3#routes Routes
 
-      hr
-      h3#routes Routes
+    -var routeId = 0
+    while routeId < 4
+      +routeHTML(routes[routeId], stations, routeId++)
 
-      -var routeId = 0
-      while routeId < 4
-        +routeHTML(routes[routeId], stations, routeId++)
+    hr
+    h3 Ride Support and Rest Stops
+    .row
+      .col-xs-12.col-lg-10.col-xl-9
+        p There will be about 7-9 official vehicles patrolling the routes, which will be equipped with pumps, bike carriers, repair kits, first aid kits, water, communication, and event contact lists, which will also be available at rest stops. There will be a moto safety team consisting of about the same number of official vehicles. Each stop will also have about 4-8 volunteers. Rest stops will each have 2 porta potties unless there is a rest room on site.
+    
+    .row
+      -var stopId = 0
+      while stopId < 7
+        +restStopHTML(stations[stopId++])
 
-      hr
-      h3 Ride Support and Rest Stops
-      .row
-        .col-xs-12.col-lg-10.col-xl-9
-          p There will be about 7-9 official vehicles patrolling the routes, which will be equipped with pumps, bike carriers, repair kits, first aid kits, water, communication, and event contact lists, which will also be available at rest stops. There will be a moto safety team consisting of about the same number of official vehicles. Each stop will also have about 4-8 volunteers. Rest stops will each have 2 porta potties unless there is a rest room on site.
-      
-      .row
-        -var stopId = 0
-        while stopId < 7
-          +restStopHTML(stations[stopId++])
-
-      hr
-      h3 Rider Etiquette
-      .row
-        .col-xs-12.col-lg-10.col-xl-9
-          p This event is a charity bike ride benefitting the Santa Cruz AIDS Project.  It is not a race and is not timed, so just have fun!  Each ride course will follow established roads, and riders must obey traffic laws.  Temporary wayfinding signs will be posted at each turn.  Riders are encouraged to familiarize themselves with the route ahead of time.  
+    hr
+    h3 Rider Etiquette
+    .row
+      .col-xs-12.col-lg-10.col-xl-9
+        p This event is a charity bike ride benefitting the Santa Cruz AIDS Project.  It is not a race and is not timed, so just have fun!  Each ride course will follow established roads, and riders must obey traffic laws.  Temporary wayfinding signs will be posted at each turn.  Riders are encouraged to familiarize themselves with the route ahead of time.  

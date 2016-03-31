@@ -66,15 +66,15 @@
         "miles": 65,
         "restStops": [0, 2, 1],
         "foodStops": [5, 6],
-        "gpsLink": "http://ridewithgps.com/routes/6559675",
+        "gpsLink": "#",
         "summary": "3,319 feet of climbing, 3 aid stations, 2 food stops",
-        "description": "The 65 mile route parallels the century as far as the second pit stop.  From there it travels through the beautiful rolling hills of Northern Monterey County among artichokes and strawberries and apple orchards, rejoining the century ride in Aromas for lunch.  This route has moderate climbs. Start time is 8 am."
+        "description": "The 65 mile route is under review for the 2016 ride.  Check back later for confirmed route.  Start time is 8 am."
     }, {
         "miles": 100,
         "restStops": [0, 2, 3, 4, 1],
         "foodStops": [5, 6],
-        "gpsLink": "http://ridewithgps.com/routes/6559676",
+        "gpsLink": "#",
         "summary": "4,829 feet of climbing, 5 aid stations, 2 food stops",
-        "description": "This is your century route option!  It will take you through San Juan Bautista via Moss Landing and San Juan Grade.  The century follows wonderful back roads, farmlands,  redwood forests and ocean views in Santa Cruz, Monterey and San Benito Counties.  An amazing route that hugs the coast and has some challenging climbs!  Starting time is 7 am."
+        "description": "The 100 mile route is under review for the 2016 ride.  Check back later for confirmed route.    Starting time is 7 am."
     }]
 }
