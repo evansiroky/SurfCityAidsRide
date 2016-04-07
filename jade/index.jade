@@ -5,8 +5,7 @@ block pageHeader
   h2 Sunday October 9th 2016
   .row.text-xs-center
     .col-xs-12
-      a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsrideregistration') Register to Ride!
-      a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Register to Fundraise!
+      a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Register Now!
   h4 Santa Cruz California    
 
 block content
@@ -19,79 +18,73 @@ block content
         a(href='https://www.flickr.com/photos/fogcat5/13656934153/') Flickr User fogcat5
 
     #home-cards.row
-      .col-sm-12.col-md-4
-        .row
-          .col-xs-12
-            .card.bg-faded
-              .card-block
-                h4.card-title Day of Event
-              a(href='dayOfEvent.html')
-                img(src='assets/dayOfEvent.jpg' alt='Day of Event')
-              .card-block
-                p.card-text All rides start at the Santa Cruz County Courthouse.  Registration closes at the start of each ride.
-                p.card-text Choose a route: 12, 30, 65 or 100 miles!
-                a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsrideregistration') Register Now!
-                a.btn.btn-primary(href='dayOfEvent.html') Learn More
-                a.btn.btn-primary(href='dayOfEvent.html#routes') View Routes
-        
-            .card.bg-faded
-              .card-block
-                h4.card-title Training Rides
-              a(href='training.html')
-                img(src='assets/training.jpg' alt='Training')
-              .card-block
-                p.card-text Get in shape for the big day and make new friends with these training rides!
-                a.btn.btn-primary(href='training.html') Learn More
+      .col-sm-12.col-md-4.home-column
+        .card.bg-faded
+          .card-block
+            h4.card-title Day of Event
+          a(href='dayOfEvent.html')
+            img(src='assets/dayOfEvent.jpg' alt='Day of Event')
+          .card-block
+            p.card-text All rides start at the Santa Cruz County Courthouse.  Registration closes at the start of each ride.
+            p.card-text Choose a route: 12, 30, 65 or 100 miles!
+            a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Register Now!
+            a.btn.btn-primary(href='dayOfEvent.html') Learn More
+            a.btn.btn-primary(href='dayOfEvent.html#routes') View Routes
+    
+        .card.bg-faded
+          .card-block
+            h4.card-title Training Rides
+          a(href='training.html')
+            img(src='assets/training.jpg' alt='Training')
+          .card-block
+            p.card-text Get in shape for the big day and make new friends with these training rides!
+            a.btn.btn-primary(href='training.html') Learn More
           
-      .col-sm-12.col-md-4
-        .row
-          .col-xs-12
-            //.card.bg-faded
-              .card-block
-                h4.card-title Top Fundraisers
-              iframe#donor-page-fundraisers(src="http://encompasscs.donorpages.com/Widget/getlinks.aspx?did=461d8da5-fe11-4b1d-8328-a22070628464&eid=10&vid=0")
+      .col-sm-12.col-md-4.home-column
+        //.card.bg-faded
+          .card-block
+            h4.card-title Top Fundraisers
+          iframe#donor-page-fundraisers(src="http://encompasscs.donorpages.com/Widget/getlinks.aspx?did=461d8da5-fe11-4b1d-8328-a22070628464&eid=10&vid=0")
 
-            .card.bg-faded
-              .card-block
-                h4.card-title Fundraising
-              a(href='fundraising.html')
-                img(src='assets/jerseys.jpg' alt='Fundraising')
-              .card-block
-                p.card-text Your support helps to fund services for men, women and children who are HIV positive, as well as prevention and education programs.  Donate today and make a difference!
-                a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Fundraise!
-                a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/login') Login
-                a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsridedonation') General Donation
+        .card.bg-faded
+          .card-block
+            h4.card-title Fundraising
+          a(href='fundraising.html')
+            img(src='assets/jerseys.jpg' alt='Fundraising')
+          .card-block
+            p.card-text Your support helps to fund services for men, women and children who are HIV positive, as well as prevention and education programs.  Donate today and make a difference!
+            a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Register Now!
+            a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/login') Login
+            a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsridedonation') General Donation
 
-            .card.bg-faded
-              .card-block
-                h4.card-title Volunteer
-              a(href='volunteer.html')
-                img(src='assets/volunteer.jpg' alt='Volunteer')
-              .card-block
-                p.card-text It takes a lot to put the Surf City AIDS Ride together. We need your help!  Sign up to volunteer today!
-                a.btn.btn-primary(href='volunteer.html') Learn More
-                a.btn.btn-primary(href='volunteer.html#volunteer-google-form') Sign Up Now!
+        .card.bg-faded
+          .card-block
+            h4.card-title Volunteer
+          a(href='volunteer.html')
+            img(src='assets/volunteer.jpg' alt='Volunteer')
+          .card-block
+            p.card-text It takes a lot to put the Surf City AIDS Ride together. We need your help!  Sign up to volunteer today!
+            a.btn.btn-primary(href='volunteer.html') Learn More
+            a.btn.btn-primary(href='volunteer.html#volunteer-google-form') Sign Up Now!
 
-      .col-sm-12.col-md-4
-        .row
-          .col-xs-12
-            .card.bg-faded
-              .card-block
-                h4.card-title Sponsors
-              a(href='sponsors.html')
-                img(src='assets/sponsors.jpg' alt='Sponsors')
-              .card-block
-                p.card-text We are currently seeking sponsors for our 2016 event.  Click the button below to learn more about how you can have your business featured now!
-                a.btn.btn-primary(href='sponsors.html') View Sponsors
+      .col-sm-12.col-md-4.home-column
+        .card.bg-faded
+          .card-block
+            h4.card-title Sponsors
+          a(href='sponsors.html')
+            img(src='assets/sponsors.jpg' alt='Sponsors')
+          .card-block
+            p.card-text We are currently seeking sponsors for our 2016 event.  Click the button below to learn more about how you can have your business featured now!
+            a.btn.btn-primary(href='sponsors.html') View Sponsors
 
-            .card.bg-faded
-              .card-block
-                h4.card-title About the AIDS Project
-              a(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap')
-                img#encompass-logo(src='assets/encompass-logo.jpg' alt='Encompass Logo')
-              .card-block
-                p.card-text Santa Cruz AIDS Project (SCAP), a program of Encompass Community Services serves men, women and children who are HIV positive living in Santa Cruz County. Our mission is to promote and participate in a comprehensive and compassionate response to HIV and AIDS through education, advocacy, and supportive services.
-                a.btn.btn-primary(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap') Learn More
+        .card.bg-faded
+          .card-block
+            h4.card-title About the AIDS Project
+          a(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap')
+            img#encompass-logo(src='assets/encompass-logo.jpg' alt='Encompass Logo')
+          .card-block
+            p.card-text Santa Cruz AIDS Project (SCAP), a program of Encompass Community Services serves men, women and children who are HIV positive living in Santa Cruz County. Our mission is to promote and participate in a comprehensive and compassionate response to HIV and AIDS through education, advocacy, and supportive services.
+            a.btn.btn-primary(href='http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap') Learn More
 
     // hr
 
