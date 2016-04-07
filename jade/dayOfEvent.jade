@@ -40,9 +40,6 @@ mixin restStopHTML(cfg, websafeName)
           td
             address!= cfg.address + '<br/>' + cfg.city
         tr
-          td Volunteer Setup Time
-          td= cfg.volunteerInfo
-        tr
           td Hours open for Riders
           td= cfg.hours
 
@@ -66,7 +63,7 @@ block content
     h3 Registration
 
     .row
-      .col-xs-12.col-md-6
+      .col-xs-12.col-md-9.col-lg-7
         h4 Online Registration
         p Register online to avoid waiting in line on the day of the event.  Online registration will close at Midnight on October 6th.  
         p Please select whether you want to register for just the bike ride or also for the fundraising.  You only need to complete one to be able to ride.  For more information on fundraising, please see the 
@@ -75,7 +72,7 @@ block content
         p.registration-buttons
           a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsrideregistration') Ride Only
           a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Ride + Fundraising
-      .col-xs-12.col-md-6
+      //.col-xs-12.col-md-6
         h4 Day of Event Registration
         p It is possible to register to ride on the day of the event.  Registration for each ride will close at the start of each ride.  You can pay using cash, check or credit card on the day of the event.  Please find a registration table and we'll get you signed up!
 
@@ -89,10 +86,10 @@ block content
           | View in Map      
 
       .col-xs-12.col-sm-6
-        p The start and finish are at the Santa Cruz County Courthouse.  There is free parking onsite.  Click on the map to get detailed directions.
+        p The start and finish are at the Santa Cruz Courthouse.  There is free parking onsite.  Click on the map to get detailed directions.
 
         address
-        | Santa Cruz County Courthouse <br/>
+        | Santa Cruz Courthouse <br/>
         | 701 Ocean Street <br/>
         | Santa Cruz, CA 95060
 
@@ -132,7 +129,7 @@ block content
     hr
     h3 Ride Support and Rest Stops
     .row
-      .col-xs-12.col-lg-10.col-xl-9
+      .col-xs-12.col-md-9.col-lg-7
         p There will be about 7-9 official vehicles patrolling the routes, which will be equipped with pumps, bike carriers, repair kits, first aid kits, water, communication, and event contact lists, which will also be available at rest stops. There will be a moto safety team consisting of about the same number of official vehicles. Each stop will also have about 4-8 volunteers. Rest stops will each have 2 porta potties unless there is a rest room on site.
     
     .row
@@ -143,5 +140,5 @@ block content
     hr
     h3 Rider Etiquette
     .row
-      .col-xs-12.col-lg-10.col-xl-9
+      .col-xs-12.col-md-9.col-lg-7
         p This event is a charity bike ride benefitting the Santa Cruz AIDS Project.  It is not a race and is not timed, so just have fun!  Each ride course will follow established roads, and riders must obey traffic laws.  Temporary wayfinding signs will be posted at each turn.  Riders are encouraged to familiarize themselves with the route ahead of time.  

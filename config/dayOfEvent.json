@@ -3,49 +3,42 @@
         "name": "Esplanade Park",
         "address": "123 Esplanade",
         "city": "Capitola, CA",
-        "volunteerInfo": "Arrive by 6:15am for set up.",
         "hours": "7:15am - 11:00am",
         "routes": [12, 30, 65, 100]
     }, {
         "name": "Epicenter Cycling",
         "address": "8035 Soquel Drive",
         "city": "Aptos, CA",
-        "volunteerInfo": "Arrive by 9:00am for set up.",
         "hours": "10am - 5:30pm",
         "routes": [30, 65, 100]
     }, {
         "name": "Calfee Design",
         "address": "783 San Andreas Road",
         "city": "La Selva Beach, CA",
-        "volunteerInfo": "Arrive by 6:45am for set up.",
         "hours": "7:45am - 11:00am",
         "routes": [65, 100]
     }, {
         "name": "Lagunita School",
         "address": "975 San Juan Grade",
         "city": "Salinas, CA",
-        "volunteerInfo": "Arrive by 8:30am for set up.",
         "hours": "9:00am - 12:00pm",
         "routes": [100]
     }, {
         "name": "Verutti Park",
         "address": "699 2nd St",
         "city": "San Juan Bautista, CA",
-        "volunteerInfo": "Arrive by 8:30am for set up.",
         "hours": "9:30am - 2:30pm",
         "routes": [100]
     }, {
         "name": "Aromas Grange",
         "address": "400 Rose Ave",
         "city": "Aromas, CA",
-        "volunteerInfo": "Arrive by 9:00am for set up.",
         "hours": "10:30am - 3:45pm",
         "routes": [65, 100]
     }, {
         "name": "Gizdich Ranch",
         "address": "55 Peckham Road",
         "city": "Watsonville, CA",
-        "volunteerInfo": "Arrive by 10:00am for set up.",
         "hours": "11:00am - 5:00pm",
         "routes": [65, 100]
     }],
@@ -55,7 +48,7 @@
         "restStops": [0],
         "gpsLink": "http://ridewithgps.com/routes/6559669",
         "summary": "471 feet of climbing, 1 aid station",
-        "description": "Easy route for the beginner! NO BIG HILLS!  Ride from the Santa Cruz County Courthouse to Capitola Village and back.  Fun for cyclists of all skill levels. Ride a beach cruiser, a tandem, your Burning man art bike or a fixie! Wear a costume!  Tell everyone to come ride: family, friends, and co-workers!  Come ride with various Santa Cruz celebrities!!!"
+        "description": "Easy route for the beginner! NO BIG HILLS!  Ride from the Santa Cruz Courthouse to Capitola Village and back.  Fun for cyclists of all skill levels. Ride a beach cruiser, a tandem, your Burning man art bike or a fixie! Wear a costume!  Tell everyone to come ride: family, friends, and co-workers!  Starting time is 9am."
     }, {
         "miles": 30,
         "restStops": [0, 1],
