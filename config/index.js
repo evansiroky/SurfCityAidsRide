@@ -18,7 +18,7 @@ config.cssBuild.outFile = "static/css/main.css";
 config.html = {}
 config.html.files = []
 
-var pages = ['Home', 'Day of Event', 'Training', 'Volunteer', 'Sponsors', 'Fundraising'];
+var pages = ['Home', 'Day of Event', 'Training', 'Volunteer', 'Sponsors', 'Fundraising', 'About Us'];
 
 var extraPageCfg = {}
 extraPageCfg['Day of Event'] = require('./dayOfEvent.json')

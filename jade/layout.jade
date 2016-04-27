@@ -94,8 +94,11 @@ html(lang="en")
                   if fundraisingActive
                     span.sr-only (current)
 
-              li.nav-item
-                a.nav-link(href="http://www.encompasscs.org/community-support-services/santa-cruz-aids-project-scap") About Us
+              li(class='nav-item ' + (aboutActive ? 'active' : ''))
+                a.nav-link(href="aboutUs.html")
+                  | About Us
+                  if aboutActive
+                    span.sr-only (current)
 
         #page-header.col-xs-12.text-xs-center(style='background-image: url(' + pageHeaderImage + ')')
           #page-header-content
