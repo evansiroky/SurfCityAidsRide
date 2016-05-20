@@ -1,31 +1,8 @@
+mixin sponsor(cfg)
+  .col-xs-4.col-lg-3.col-xl-2
+    a(href=cfg.url)
+      img(src='assets/' + cfg.img alt=cfg.name + ' logo')
+
 #sponsors.row
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://adventuresportsjournal.com/')
-      img(src='assets/adventure-sports-journal.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://www.wholefoodsmarket.com/stores/santacruz')
-      img(src='assets/whole-foods.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://epicentercycling.com/')
-      img(src='assets/epicenter-cycling.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://www.bicycletrip.com/')
-      img(src='assets/bicycle-trip.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://www.spokesmanbicycles.com/')
-      img(src='assets/spokesman.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://www.familycycling.com/')
-      img(src='assets/family-cycling-center.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://www.cafeugly.com/Cafeugly/home.html')
-      img(src='assets/ugly-mug.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://bikestationaptos.com/')
-      img(src='assets/bike-station-aptos.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://www.timbuk2.com/')
-      img(src='assets/timbuk2.jpg')
-  .col-xs-4.col-lg-3.col-xl-2
-    a(href='http://santacruzcore.com/')
-      img(src='assets/santa-cruz-core-fitness-rehab.jpg')
+  each sponsorItem in sponsors
+    +sponsor(sponsorItem)

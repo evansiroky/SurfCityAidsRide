@@ -29,7 +29,7 @@ mixin routeHTML(cfg, stations, routeId)
   if routeId < 3
     hr.route-divider
 
-mixin restStopHTML(cfg, websafeName)
+mixin restStopHTML(cfg)
   - function websafeName(s) { return s.toLowerCase().replace(' ', '-') }
   .col-md-12.col-lg-6.aid-station-container
     .aid-station

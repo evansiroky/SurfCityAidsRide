@@ -1,0 +1,37 @@
+{
+  "sponsors": [
+    {
+      "name": "Bay Federal Credit Union",
+      "url": "https://www.bayfed.com/",
+      "img": "BFCUlogo-600.jpg"
+    }, {
+      "name": "Bike Station",
+      "url": "http://www.bikestationaptos.com/",
+      "img": "Bike-Station.jpg"
+    }, {
+      "name": "Bicycle Trip",
+      "url": "http://www.bicycletrip.com/",
+      "img": "biketrip_logo_horizontal_bar_600.png"
+    }, {
+      "name": "Epicenter Cycling",
+      "url": "http://epicentercycling.com/",
+      "img": "epicenter-sticker-logo-pink.png"
+    }, {
+      "name": "Family Cycling Center",
+      "url": "http://www.familycycling.com/",
+      "img": "familycyclinglogo.png"
+    }, {
+      "name": "Monterey Bay Properties",
+      "url": "http://www.montereybayprop.com/",
+      "img": "mbp.gif"
+    }, {
+      "name": "The Ugly Mug",
+      "url": "http://www.cafeugly.com/",
+      "img": "Mug.png"
+    }, {
+      "name": "Spokesman Bicycles",
+      "url": "http://spokesmanbicycles.com/",
+      "img": "spokesman.jpg"
+    }
+  ]
+}

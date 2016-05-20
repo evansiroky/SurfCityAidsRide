@@ -23,6 +23,10 @@ var pages = ['Home', 'Day of Event', 'Training', 'Volunteer', 'Sponsors', 'Fundr
 var extraPageCfg = {}
 extraPageCfg['Day of Event'] = require('./dayOfEvent.json')
 
+var sponsorList = require('./sponsors.json')
+extraPageCfg['Home'] = sponsorList
+extraPageCfg['Sponsors'] = sponsorList
+
 for (var i = 0; i < pages.length; i++) {
   var curPage = pages[i],
     filename = makeFilename(curPage),

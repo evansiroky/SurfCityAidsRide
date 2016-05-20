@@ -308,11 +308,11 @@ p
     margin-left 1.5em
  
 .card img
-  @media (min-width: 544px)
+  @media (min-width: 767px)
     gray-img()
     
 .card img:hover
-  @media (min-width: 544px)
+  @media (min-width: 767px)
     gray-img-hover()
     
 #donor-page-fundraisers
@@ -354,10 +354,12 @@ p
     line-height 120px
     
   img
-    gray-img()
+    @media (min-width: 767px)
+      gray-img()
     
   img:hover
-    gray-img-hover()
+    @media (min-width: 767px)
+      gray-img-hover()
     
 .registration-buttons a
   margin 10px
