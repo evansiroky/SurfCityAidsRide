@@ -5,7 +5,7 @@ mixin routeHTML(cfg, stations, routeId)
   .row
     .col-xs-12.col-md-6.text-xs-center
       a(href=cfg.gpsLink)
-        img(src='assets/' + cfg.miles +'-profile.png' alt=cfg.miles + ' Mile Route Elevation Profile')
+        img.route-img(src='assets/' + cfg.miles +'-profile.jpg' alt=cfg.miles + ' Mile Route Elevation Profile')
       a(href=cfg.gpsLink) View Full Route
     .col-xs-12.col-md-6
       p= cfg.description
