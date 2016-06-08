@@ -18,16 +18,22 @@
         "hours": "7:45am - 11:00am",
         "routes": [65, 100]
     }, {
-        "name": "Lagunita School",
-        "address": "975 San Juan Grade",
-        "city": "Salinas, CA",
-        "hours": "9:00am - 12:00pm",
-        "routes": [100]
+        "name": "Las Lomas Market",
+        "address": "182 Hall Rd",
+        "city": "Watsonville, CA",
+        "hours": "8:00am - 12:00pm",
+        "routes": [65, 100]
     }, {
         "name": "Verutti Park",
         "address": "699 2nd St",
         "city": "San Juan Bautista, CA",
-        "hours": "9:30am - 2:30pm",
+        "hours": "10:00am - 2:30pm",
+        "routes": [100]
+    }, {
+        "name": "Lagunita School",
+        "address": "975 San Juan Grade",
+        "city": "Salinas, CA",
+        "hours": "10:30am - 2:30pm",
         "routes": [100]
     }, {
         "name": "Aromas Grange",
@@ -57,17 +63,17 @@
         "description": "This fun route hugs the coastline from The Boardwalk to Seacliff.  It has beautiful coastal views, a couple easy to moderate climbs and two rest stops.  Starting time is 9 am."
     }, {
         "miles": 65,
-        "restStops": [0, 2, 1],
-        "foodStops": [5, 6],
+        "restStops": [0, 2, 3, 1],
+        "foodStops": [6, 7],
         "gpsLink": "https://ridewithgps.com/routes/14136849",
-        "summary": "3,167 feet of climbing, 3 aid stations, 2 food stops",
+        "summary": "3,167 feet of climbing, 4 aid stations, 2 food stops",
         "description": "The 65 mile route has been updated for the 2016 ride!  The route shares the same course as the 30 mile route until it splits off at La Selva Beach.  Then the route continues to the lunch and pie stops!  From there, the route meanders through quiet country roads all the way back to Santa Cruz.  Start time is 8 am."
     }, {
         "miles": 100,
-        "restStops": [0, 2, 3, 4, 1],
-        "foodStops": [5, 6],
+        "restStops": [0, 2, 3, 4, 5, 1],
+        "foodStops": [6, 7],
         "gpsLink": "https://ridewithgps.com/routes/14137409",
-        "summary": "5,716 feet of climbing, 5 aid stations, 2 food stops",
-        "description": "The 100 mile route has been updated for the 2016 ride!  The route shares the same course as the 65 mile, but adds a bonus section!  This year the course goes south from San Juan Bautista to Salinas and then loops back to Aromas Grange for lunch.    Starting time is 7 am."
+        "summary": "5,718 feet of climbing, 6 aid stations, 2 food stops",
+        "description": "The 100 mile route has been updated for the 2016 ride!  The route shares the same course as the 65 mile and adds a bonus section!  This year the course goes south from San Juan Bautista to Salinas and then loops back to Aromas Grange for lunch.    Starting time is 7 am."
     }]
 }
