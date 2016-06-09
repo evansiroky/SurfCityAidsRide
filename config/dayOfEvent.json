@@ -9,7 +9,7 @@
         "name": "Epicenter Cycling",
         "address": "8035 Soquel Drive",
         "city": "Aptos, CA",
-        "hours": "10am - 5:30pm",
+        "hours": "10am - 4:30pm",
         "routes": [30, 65, 100]
     }, {
         "name": "Calfee Design",
@@ -45,7 +45,7 @@
         "name": "Gizdich Ranch",
         "address": "55 Peckham Road",
         "city": "Watsonville, CA",
-        "hours": "11:00am - 5:00pm",
+        "hours": "11:00am - 4:00pm",
         "routes": [65, 100]
     }],
 
