@@ -15,37 +15,62 @@ $repl = 'http://encompasscs.donorpages.com//EventDetails.aspx?token=\1&mode=stat
 
 $crawler = $client->request('POST', preg_replace($pattern, $repl, $frame));
 
-$fundraisers = array();
+$form = $crawler->selectButton('Search')->form();
+$values = $form->getPhpValues();
 
-foreach($crawler->filter('tr') as $row) {
-  if($row->childNodes->length == 5 && is_numeric($row->childNodes[0]->nodeValue)) {
-    $person = array();
-    $i = 0;
-    foreach ($row->childNodes as $cell) {
-      $text = trim($cell->nodeValue);
-      switch ($i) {
-        case 0:
-          $person['rank'] = $text;
-          break;
-        case 1:
-          $person['name'] = $text;
-          $person['link'] = $cell->childNodes[1]->childNodes[1]->getAttribute('href');
-          break;
-        case 2:
-          $person['numDonors'] = $text;
-          break;
-        case 3:
-          $person['numDonations'] = $text;
-          break;
-        case 4:
-          $person['amount'] = $text;
-          break;
-      }
-      $i++;
-    }
-    $fundraisers[]= $person;
+function getFundraisersByType($type) {
+
+  global $client, $form, $values;
+
+  if($type == 'teams') {
+    $values['__EVENTTARGET'] = 'ctl00$contentMain$eventDetailControl$statisticsDataType$1';
+    $values['ctl00$contentMain$eventDetailControl$statisticsDataType'] = 'Team';
+  } else {
+    $values['__EVENTTARGET'] = 'ctl00$contentMain$eventDetailControl$statisticsDataType$2';
+    $values['ctl00$contentMain$eventDetailControl$statisticsDataType'] = 'Individual';
   }
+
+  $crawler = $client->request($form->getMethod(), $form->getUri(), $values, $form->getPhpFiles());
+
+  $entities = array();
+
+  foreach($crawler->filter('tr') as $row) {
+    if($row->childNodes->length == 5 && is_numeric($row->childNodes[0]->nodeValue)) {
+      $entity = array();
+      $i = 0;
+      foreach ($row->childNodes as $cell) {
+        $text = trim($cell->nodeValue);
+        switch ($i) {
+          case 0:
+            $entity['rank'] = $text;
+            break;
+          case 1:
+            $entity['name'] = $text;
+            $entity['link'] = $cell->childNodes[1]->childNodes[1]->getAttribute('href');
+            break;
+          case 2:
+            $entity['numDonors'] = $text;
+            break;
+          case 3:
+            $entity['numDonations'] = $text;
+            break;
+          case 4:
+            $entity['amount'] = $text;
+            break;
+        }
+        $i++;
+      }
+      $entities[]= $entity;
+    }
+  }
+
+  return $entities;
 }
+
+$fundraisers = array(
+  'teams' => getFundraisersByType('teams'),
+  'individuals' => getFundraisersByType('individuals')
+);
 
 header('Content-Type: application/json');
 echo json_encode($fundraisers);
