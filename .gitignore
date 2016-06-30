@@ -80,3 +80,7 @@ $RECYCLE.BIN/
 
 # build directory
 static
+
+# composer files
+php/vendor
+php/composer.lock
