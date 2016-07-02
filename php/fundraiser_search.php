@@ -6,7 +6,7 @@ if(!isset($_GET['q'])) {
   die();
 }
 
-require_once "vendor/autoload.php";
+require_once "goutte-v1.0.7.phar";
 
 use Goutte\Client;
 
@@ -30,15 +30,20 @@ $crawler = $client->request($form->getMethod(), $form->getUri(), $values, $form-
 
 $results = array();
 
-foreach($crawler->filter('a') as $link) {
+foreach($crawler as $item) {
+  $nodeList = $item->getElementsByTagName('a');
+  $nodeListLen = $nodeList->length;
+  for($i=0; $i < $nodeListLen; $i++) {
+    $link = $nodeList->item($i);
 
-  if(stripos($link->getAttribute('id'), 'tl00_contentMain_eventDetailControl_searchDataList')) {
-    $results[] = array(
-      'name' => trim($link->nodeValue),
-      'link' => $link->getAttribute('href')
-    );
+    if(stripos($link->getAttribute('id'), 'tl00_contentMain_eventDetailControl_searchDataList')) {
+      $results[] = array(
+        'name' => trim($link->nodeValue),
+        'link' => $link->getAttribute('href')
+      );
+    }
+
   }
-
 }
 
 header('Content-Type: application/json');

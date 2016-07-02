@@ -1,6 +1,6 @@
 <?php
 
-require_once "vendor/autoload.php";
+require_once "goutte-v1.0.7.phar";
 
 use Goutte\Client;
 
@@ -34,33 +34,38 @@ function getFundraisersByType($type) {
 
   $entities = array();
 
-  foreach($crawler->filter('tr') as $row) {
-    if($row->childNodes->length == 5 && is_numeric($row->childNodes[0]->nodeValue)) {
-      $entity = array();
-      $i = 0;
-      foreach ($row->childNodes as $cell) {
-        $text = trim($cell->nodeValue);
-        switch ($i) {
-          case 0:
-            $entity['rank'] = $text;
-            break;
-          case 1:
-            $entity['name'] = $text;
-            $entity['link'] = $cell->childNodes[1]->childNodes[1]->getAttribute('href');
-            break;
-          case 2:
-            $entity['numDonors'] = $text;
-            break;
-          case 3:
-            $entity['numDonations'] = $text;
-            break;
-          case 4:
-            $entity['amount'] = $text;
-            break;
+  foreach($crawler as $item) {
+    $nodeList = $item->getElementsByTagName('tr');
+    $nodeListLen = $nodeList->length;
+    for($i=0; $i < $nodeListLen; $i++) {
+      $row = $nodeList->item($i);
+      if($row->childNodes->length == 5 && is_numeric($row->childNodes->item(0)->nodeValue)) {
+        $entity = array();
+        $j = 0;
+        foreach ($row->childNodes as $cell) {
+          $text = trim($cell->nodeValue);
+          switch ($j) {
+            case 0:
+              $entity['rank'] = $text;
+              break;
+            case 1:
+              $entity['name'] = $text;
+              $entity['link'] = $cell->childNodes->item(1)->childNodes->item(1)->getAttribute('href');
+              break;
+            case 2:
+              $entity['numDonors'] = $text;
+              break;
+            case 3:
+              $entity['numDonations'] = $text;
+              break;
+            case 4:
+              $entity['amount'] = $text;
+              break;
+          }
+          $j++;
         }
-        $i++;
+        $entities[]= $entity;
       }
-      $entities[]= $entity;
     }
   }
 

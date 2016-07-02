@@ -15,7 +15,7 @@ var concat = require('concat'),
   };
 
 // font-awesome css
-files.push('./node_modules/font-awesome/css/font-awesome.min.css');
+//files.push('./node_modules/font-awesome/css/font-awesome.min.css');
 
 // bootstrap
 files.push('./node_modules/bootstrap/dist/css/bootstrap.css');
@@ -36,10 +36,10 @@ fs.readdirSync('./dist').forEach(function(file) {
 
 concat(files, dest, opCallback('files concatenated'));
 
-// copy font-awesome fonts
+/* copy font-awesome fonts
 fs.copy('./node_modules/font-awesome/fonts',
   './dist/fonts',
-  opCallback('font-awesome fonts moved'))
+  opCallback('font-awesome fonts moved'))*/
 
 // copy SCAR Ride fonts
 fs.walk('./styles/fonts')
