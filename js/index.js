@@ -2,9 +2,29 @@ var $ = require('jquery'),
   analytics = require('ga-browser')(),
   tether = require('tether'),
   bootstrap = require('bootstrap'),
-  UAParser = require('ua-parser-js')
+  UAParser = require('ua-parser-js'),
+  autocomplete = require('jquery-autocomplete')
 
-var config = require('./config.js')
+var config = require('./config.js');
+
+var exists = function(tag) {
+  return $(tag).length > 0
+}
+
+var makeFundraiserBody = function(data, limit) {
+  var html = '<tr><th>Name</th><th>Amount</th></tr>';
+
+  limit = limit ? Math.min(data.length, limit) : data.length;
+
+  for (var i = 0; i < limit; i++) {
+    html += '<tr>';
+    html += '<td><a href="' + data[i].link + '">' + data[i].name + '</a></td>';
+    html += '<td>' + data[i].amount + '</td>';
+    html += '</tr>';
+  }
+
+  return html;
+}
 
 
 $(function() {
@@ -31,5 +51,28 @@ $(function() {
   }
 
   $('#map-link').attr('href', linkFull);
+
+  if(exists('#top-individual-fundraisers')) { 
+
+    $.get('ws/top_fundraisers.php', function(data) {
+      $('#top-individual-fundraisers').html(makeFundraiserBody(data.individuals, 5));
+      $('#top-team-fundraisers').html(makeFundraiserBody(data.teams, 5));
+    });
+
+  }
+
+  if(exists('#fundraiser-search')) {
+    $('#fundraiser-search').autocomplete({
+      source:[{
+        minLength: 3,
+        url:'ws/fundraiser_search.php?q=%QUERY%',
+        type:'remote'
+      }],
+      valueKey: 'name',
+      titleKey: 'name'
+    }).on('selected.xdsoft', function(e, datum){
+     window.location = datum.link;
+    });
+  }
 
 })

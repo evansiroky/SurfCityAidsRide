@@ -79,7 +79,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # build directory
-static
+dist
 
 # composer files
 php/vendor

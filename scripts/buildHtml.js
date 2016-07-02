@@ -15,6 +15,6 @@ for (var i = 0; i < config.html.files.length; i++) {
     template = jade.compileFile('./jade/' + curPage.filename + '.jade', options),
     templateCfg = curPage.cfg;
 
-  fs.writeFile('./static/' + curPage.filename + '.html',
+  fs.writeFile('./dist/' + curPage.filename + '.html',
     template(templateCfg))
 }
