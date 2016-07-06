@@ -13,7 +13,7 @@ var camelize = function(str) {
 var config = {};
 
 config.cssBuild = {};
-config.cssBuild.outFile = "static/css/main.css";
+config.cssBuild.outFile = "dist/css/main.css";
 
 config.html = {}
 config.html.files = []

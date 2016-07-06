@@ -8,5 +8,5 @@ var tryToMakeDir = function(dir) {
   }
 }
 
-tryToMakeDir('./static');
-tryToMakeDir('./static/css');
+tryToMakeDir('./dist');
+tryToMakeDir('./dist/css');

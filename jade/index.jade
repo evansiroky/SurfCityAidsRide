@@ -37,13 +37,17 @@ block content
           .card-block
             p.card-text Get in shape for the big day and make new friends with these training rides!
             a.btn.btn-primary(href='training.html') Learn More
+
+        .card.bg-faded
+          .card-block
+            h4.card-title About the AIDS Project
+          a(href='aboutUs.html')
+            img#encompass-logo(src='assets/encompass-logo.jpg' alt='Encompass Logo')
+          .card-block
+            p.card-text Santa Cruz AIDS Project (SCAP), a program of Encompass Community Services serves men, women and children who are HIV positive living in Santa Cruz County. Our mission is to promote and participate in a comprehensive and compassionate response to HIV and AIDS through education, advocacy, and supportive services.
+            a.btn.btn-primary(href='aboutUs.html') Learn More
           
       .col-sm-12.col-md-4.home-column
-        //.card.bg-faded
-          .card-block
-            h4.card-title Top Fundraisers
-          iframe#donor-page-fundraisers(src="http://encompasscs.donorpages.com/Widget/getlinks.aspx?did=461d8da5-fe11-4b1d-8328-a22070628464&eid=10&vid=0")
-
         .card.bg-faded
           .card-block
             h4.card-title Fundraising
@@ -54,6 +58,7 @@ block content
             a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Register Now!
             a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/login') Login
             a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsridedonation') General Donation
+            a.btn.btn-primary(href='fundraising.html') Learn More
 
         .card.bg-faded
           .card-block
@@ -68,21 +73,29 @@ block content
       .col-sm-12.col-md-4.home-column
         .card.bg-faded
           .card-block
+            h4.card-title Top Fundraisers
+          .fundraiser-block
+            h5 Individuals
+            table#top-individual-fundraisers.table.table-striped.table-bordered
+              tr
+                td Loading
+
+            h5 Teams
+            table#top-team-fundraisers.table.table-striped.table-bordered
+              tr
+                td Loading
+
+            label(for='fundraiser-search') Fundraiser Search
+            input#fundraiser-search(placeholder='Enter name')
+
+        .card.bg-faded
+          .card-block
             h4.card-title Sponsors
           a(href='sponsors.html')
             img(src='assets/sponsors.jpg' alt='Sponsors')
           .card-block
             p.card-text We are currently seeking sponsors for our 2016 event.  Click the button below to learn more about how you can have your business featured now!
             a.btn.btn-primary(href='sponsors.html') View Sponsors
-
-        .card.bg-faded
-          .card-block
-            h4.card-title About the AIDS Project
-          a(href='aboutUs.html')
-            img#encompass-logo(src='assets/encompass-logo.jpg' alt='Encompass Logo')
-          .card-block
-            p.card-text Santa Cruz AIDS Project (SCAP), a program of Encompass Community Services serves men, women and children who are HIV positive living in Santa Cruz County. Our mission is to promote and participate in a comprehensive and compassionate response to HIV and AIDS through education, advocacy, and supportive services.
-            a.btn.btn-primary(href='aboutUs.html') Learn More
 
     .hidden-sm-down
       hr
