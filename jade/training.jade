@@ -1,3 +1,10 @@
+mixin trainingDay(cfg)
+  tr
+    td= cfg.date
+    td= cfg.distances
+    td 
+      a(href=cfg.location.link)= cfg.location.name
+
 extends layout.jade
 
 block pageHeader
@@ -11,27 +18,45 @@ block content
     p A number of local bike shops host training rides to help riders get ready for the big ride!  This training group grows every year.  It is a very welcoming atmosphere with a positive vibe! It is a great way to meet friendly local cyclists who are committed to fighting HIV/AIDS. You will also get in shape!
 
     h3 Schedule
-    p.text-danger 2016 training schedule TBD
+    table.table
+      tr
+        th Date
+        th Ride Distances
+        th Start Location
+      each day in trainingDays
+        +trainingDay(day)
 
     h3 Training Ride Details
     h4 When?
-    p The training rides occur every Saturday morning until the event, starting in August.  Exact schedule TDB.
+    p The training rides occur every Saturday morning until the event, starting in August.  Each of those Saturdays riders are expected to arrive at 8am and the ride will start at 8:30am.
 
     h4 How Far?
-    p The mileages each week increases for the 30, 65, and 100 mile routes. Training Ride Leaders will assist you on the road. No one is left behind!
+    p Each week there will be different distance options based on training plans for 30, 65, and 100 mile routes.  The mileages increase each week.  Training Ride Leaders will assist you on the road.  No one is left behind!
 
     h4 Where to Meet?
-    p Each ride will start and end at a local Santa Cruz area bike shop. They will OPEN EARLY for our training rides.  Some shops may offer special discounts.s
+    p Each ride will start and end at a local Santa Cruz area bike shop. They will OPEN EARLY for our training rides.  Some shops may offer special discounts.
 
     h4 Ride Sponsors
-    p We'll help you get fueled up for fun by offering some snacks in the morning.  Coffee will be provided courtesy of
-      a(href='http://www.cafeugly.com/Cafeugly/home.html')  The Ugly Mug
+    p We'll help you get fueled up for fun by offering some snacks in the morning.  Coffee will be provided courtesy of 
+      a(href='http://www.cafeugly.com/Cafeugly/home.html') The Ugly Mug
       | .
 
     h4 Rider Conduct
-    p Helmets ARE required!  Please bring two full water bottles, 2 energy bars, and tire patch kit.  Also, please eat breakfast before riding!  A road bike / hybrid is suggested for longer rides, but not required.
+    p Riders are expected to bring the following:
+      ul
+        li Funtioning Bike and Helmet
+        li Food for longer distances
+        li Two Water Bottles (1 Water and 1 Electrolyte)
+        li CO2 can or bike frame pump
+        li Flat repair kit
+        li Sunscreen and lip balm with sunscreen
 
     p Stay connected and updated by joining the 
-      a(href='https://www.facebook.com/groups/surfcityAIDSridetraining/') Facebook training group
+      a(href='https://www.facebook.com/groups/surfcityAIDSridetraining/') Facebook training group.
+
+    h4 Additional Resources
+    p First time riders please contact Teresa Marlow at 831-818-3430 for special classes.
+    p Surf City AIDS Ride registrants get a special $5 deal for drop-in Spin classes on Tuesday and Thursday nights at Toadal Fitness.  Contact Paul Howell for more details.
+
 
 
