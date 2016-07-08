@@ -1,0 +1,54 @@
+{
+  "trainingDays": [
+    {
+      "date": "8/20/16",
+      "distances": "10 or 20 miles",
+      "location": {
+        "name": "Bike Station",
+        "link": "http://www.bikestationaptos.com/"
+      }
+    }, {
+      "date": "8/27/16",
+      "distances": "15 or 30 miles",
+      "location": {
+        "name": "The Bicycle Trip",
+        "link": "http://www.bicycletrip.com/"
+      }
+    }, {
+      "date": "9/3/16",
+      "distances": "20 or 45 miles",
+      "location": {
+        "name": "Epicenter (Santa Cruz)",
+        "link": "http://epicentercycling.com/"
+      }
+    }, {
+      "date": "9/10/16",
+      "distances": "25 or 55 miles",
+      "location": {
+        "name": "Scotts Valley Cycle Sport",
+        "link": "http://www.svcyclesport.com/"
+      }
+    }, {
+      "date": "9/17/16",
+      "distances": "30 or 60 miles",
+      "location": {
+        "name": "Family Cycling Center",
+        "link": "http://www.familycycling.com/"
+      }
+    }, {
+      "date": "9/24/16",
+      "distances": "10, 40 or 65 miles",
+      "location": {
+        "name": "Epicenter (Aptos)",
+        "link": "http://epicentercycling.com/"
+      }
+    }, {
+      "date": "10/1/16",
+      "distances": "20, 50 or 70 miles",
+      "location": {
+        "name": "Spokesman Bicycles",
+        "link": "http://spokesmanbicycles.com/"
+      }
+    }
+  ]
+}

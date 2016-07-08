@@ -27,6 +27,9 @@ var sponsorList = require('./sponsors.json')
 extraPageCfg['Home'] = sponsorList
 extraPageCfg['Sponsors'] = sponsorList
 
+var trainingDays = require('./trainingDays.json')
+extraPageCfg['Training'] = trainingDays
+
 for (var i = 0; i < pages.length; i++) {
   var curPage = pages[i],
     filename = makeFilename(curPage),
