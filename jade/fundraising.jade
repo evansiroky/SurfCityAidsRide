@@ -30,19 +30,5 @@ block content
   .col-xs-12.hidden-md-up
   .col-xs-1.hidden-md-up
   .col-xs-10.col-md-4#fundraising-widget-content
-    .card.bg-faded
-      .card-block
-        h4.card-title Top Fundraisers
-      .fundraiser-block
-        h5 Individuals
-        table#top-individual-fundraisers.table.table-striped.table-bordered
-          tr
-            td Loading
-
-        h5 Teams
-        table#top-team-fundraisers.table.table-striped.table-bordered
-          tr
-            td Loading
-
-        label(for='fundraiser-search') Fundraiser Search
-        input#fundraiser-search(placeholder='Enter name')
+    include ./fundraiser-card.jade
+    

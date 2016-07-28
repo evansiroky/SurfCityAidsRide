@@ -71,22 +71,7 @@ block content
             a.btn.btn-primary(href='volunteer.html#volunteer-google-form') Sign Up Now!
 
       .col-sm-12.col-md-4.home-column
-        .card.bg-faded
-          .card-block
-            h4.card-title Top Fundraisers
-          .fundraiser-block
-            h5 Individuals
-            table#top-individual-fundraisers.table.table-striped.table-bordered
-              tr
-                td Loading
-
-            h5 Teams
-            table#top-team-fundraisers.table.table-striped.table-bordered
-              tr
-                td Loading
-
-            label(for='fundraiser-search') Fundraiser Search
-            input#fundraiser-search(placeholder='Enter name')
+        include ./fundraiser-card.jade
 
         .card.bg-faded
           .card-block

@@ -19,8 +19,7 @@ block content
 
     h3 Schedule
     p Riders are expected to arrive at 8:00am and the ride will start at 8:30am.
-      br  
-      em.font-italic * On 10/1 the arrive time is 7:00am and the depart will be 7:30am.
+
     table.table
       tr
         th Date
@@ -28,6 +27,9 @@ block content
         th Start Location
       each day in trainingDays
         +trainingDay(day)
+
+    p
+      em.font-italic * On 10/1 the arrive time for the 70 mile ride is 7:00am and the depart will be 7:30am.  The other rides will meet at the usual time.
 
     h3 Training Ride Details
 

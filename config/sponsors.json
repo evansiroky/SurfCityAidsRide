@@ -5,6 +5,10 @@
       "url": "https://www.bayfed.com/products-services/consumer-loans/bicycle-loans",
       "img": "BFCUlogo-600.jpg"
     }, {
+      "name": "Whole Foods Market",
+      "url": "http://www.wholefoodsmarket.com/",
+      "img": "whole_foods.png"
+    }, {
       "name": "Bike Station",
       "url": "http://www.bikestationaptos.com/",
       "img": "Bike-Station.jpg"
@@ -32,6 +36,10 @@
       "name": "Spokesman Bicycles",
       "url": "http://spokesmanbicycles.com/",
       "img": "spokesman.jpg"
+    }, {
+      "name": "Scotts Valley Cycle Sport",
+      "url": "http://www.svcyclesport.com/",
+      "img": "svcs.png"
     }
   ]
 }
