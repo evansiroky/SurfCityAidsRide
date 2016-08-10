@@ -1,5 +1,22 @@
 <?php
 
+
+// attempt to use cached json file
+$cache_file = 'top_fundraisers.json';
+$cache_life = '600'; //caching time, in seconds
+
+$filemtime = @filemtime($cache_file);  // returns FALSE if file does not exist
+
+if (!$filemtime or (time() - $filemtime >= $cache_life)) {
+  // cache does not exist, or it has expired
+} else {
+  // valid cache exists
+  header('Content-Type: application/json');
+  echo file_get_contents($cache_file);
+  die();
+}
+
+// cache should be refreshed if this point is reached
 require_once "goutte-v1.0.7.phar";
 
 use Goutte\Client;
@@ -78,6 +95,9 @@ $fundraisers = array(
 );
 
 header('Content-Type: application/json');
-echo json_encode($fundraisers);
+$json = json_encode($fundraisers);
+echo $json;
+
+file_put_contents($cache_file, $json);
 
 ?>
