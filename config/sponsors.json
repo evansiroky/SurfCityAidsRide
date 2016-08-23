@@ -40,6 +40,10 @@
       "name": "Scotts Valley Cycle Sport",
       "url": "http://www.svcyclesport.com/",
       "img": "svcs.png"
+    }, {
+      "name": "Toadal Fitness",
+      "url": "http://www.toadalfitness.com/",
+      "img": "Toadal_Logo.jpg"
     }
   ]
 }
