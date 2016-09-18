@@ -48,6 +48,10 @@
       "name": "Marianne's Ice Cream",
       "url": "http://mariannesicecream.com/",
       "img": "Mariannes.jpg"
+    }, {
+      "name": "Cyclepath Outfitters",
+      "url": "http://www.cyclepathoutfitters.com/",
+      "img": "Cyclepath.jpg"
     }
   ]
 }
