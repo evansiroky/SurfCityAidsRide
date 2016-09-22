@@ -29,13 +29,17 @@
       "url": "http://www.bikestationaptos.com/",
       "img": "Bike-Station.jpg"
     }, {
-      "name": "The Ugly Mug",
-      "url": "http://www.cafeugly.com/",
-      "img": "UglyAdLogo-bottom.png"
+      "name": "Calfee Design",
+      "url": "http://calfeedesign.com/",
+      "img": "CalfeeDesign.png"
     }, {
       "name": "Spokesman Bicycles",
       "url": "http://spokesmanbicycles.com/",
       "img": "spokesman.jpg"
+    }, {
+      "name": "The Ugly Mug",
+      "url": "http://www.cafeugly.com/",
+      "img": "UglyAdLogo-bottom.png"
     }, {
       "name": "Scotts Valley Cycle Sport",
       "url": "http://www.svcyclesport.com/",
@@ -52,6 +56,10 @@
       "name": "Cyclepath Outfitters",
       "url": "http://www.cyclepathoutfitters.com/",
       "img": "cyclepath.jpg"
+    }, {
+      "name": "Santa Cruz Bodywork",
+      "url": "http://www.santacruzbodywork.com/",
+      "img": "santacruzbodywork.png"
     }
   ]
 }
