@@ -52,27 +52,27 @@
     "routes": [{
         "miles": 12,
         "restStops": [0],
-        "gpsLink": "https://ridewithgps.com/routes/14135958",
+        "gpsLink": "https://ridewithgps.com/routes/7488283",
         "summary": "457 feet of climbing, 1 aid station",
         "description": "Easy route for the beginner! NO BIG HILLS!  Ride from the Santa Cruz Courthouse to Capitola Village and back.  Fun for cyclists of all skill levels. Ride a beach cruiser, a tandem, your Burning man art bike or a fixie! Wear a costume!  Tell everyone to come ride: family, friends, and co-workers!  Starting time is 9am."
     }, {
         "miles": 30,
         "restStops": [0, 1],
-        "gpsLink": "https://ridewithgps.com/routes/14136376",
+        "gpsLink": "https://ridewithgps.com/routes/7488281",
         "summary": "1,711 feet of climbing, 2 aid stations",
         "description": "This fun route hugs the coastline from The Boardwalk to Seacliff.  It has beautiful coastal views, a couple easy to moderate climbs and two rest stops.  Starting time is 9 am."
     }, {
         "miles": 65,
         "restStops": [0, 2, 3, 1],
         "foodStops": [6, 7],
-        "gpsLink": "https://ridewithgps.com/routes/14136849",
+        "gpsLink": "https://ridewithgps.com/routes/13781171",
         "summary": "3,167 feet of climbing, 4 aid stations, 2 food stops",
         "description": "The 65 mile route has been updated for the 2016 ride!  The route shares the same course as the 30 mile route until it splits off at La Selva Beach.  Then the route continues to the lunch and pie stops!  From there, the route meanders through quiet country roads all the way back to Santa Cruz.  Start time is 8 am."
     }, {
         "miles": 100,
         "restStops": [0, 2, 3, 4, 5, 1],
         "foodStops": [6, 7],
-        "gpsLink": "https://ridewithgps.com/routes/14137409",
+        "gpsLink": "https://ridewithgps.com/routes/12862420",
         "summary": "5,718 feet of climbing, 6 aid stations, 2 food stops",
         "description": "The 100 mile route has been updated for the 2016 ride!  The route shares the same course as the 65 mile and adds a bonus section!  This year the course goes south from San Juan Bautista to Salinas and then loops back to Aromas Grange for lunch.    Starting time is 7 am."
     }]

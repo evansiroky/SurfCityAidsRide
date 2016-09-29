@@ -1,54 +1,100 @@
 {
-  "trainingDays": [
-    {
-      "date": "8/20/16",
-      "distances": "10 or 20 miles",
-      "location": {
-        "name": "Bike Station",
-        "link": "http://www.bikestationaptos.com/"
-      }
+  "trainingDays": [{
+    "date": "8/20/16",
+    "rides": [{
+      "distance": 10,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_1_-_Bike_Station_-_10_Mile_Route.pdf"
     }, {
-      "date": "8/27/16",
-      "distances": "15 or 30 miles",
-      "location": {
-        "name": "The Bicycle Trip",
-        "link": "http://www.bicycletrip.com/"
-      }
-    }, {
-      "date": "9/3/16",
-      "distances": "20 or 40 miles",
-      "location": {
-        "name": "Epicenter (Santa Cruz)",
-        "link": "http://epicentercycling.com/"
-      }
-    }, {
-      "date": "9/10/16",
-      "distances": "25 or 45 miles",
-      "location": {
-        "name": "Scotts Valley Cycle Sport",
-        "link": "http://www.svcyclesport.com/"
-      }
-    }, {
-      "date": "9/17/16",
-      "distances": "30 or 50 miles",
-      "location": {
-        "name": "Family Cycling Center",
-        "link": "http://www.familycycling.com/"
-      }
-    }, {
-      "date": "9/24/16",
-      "distances": "10, 40 or 60 miles",
-      "location": {
-        "name": "Epicenter (Aptos)",
-        "link": "http://epicentercycling.com/"
-      }
-    }, {
-      "date": "10/1/16*",
-      "distances": "20, 50 or 70 miles",
-      "location": {
-        "name": "Spokesman Bicycles",
-        "link": "http://spokesmanbicycles.com/"
-      }
+      "distance": 20,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_1_-_Bike_Station_-_20_Mile_Route.pdf"
+    }],
+    "location": {
+      "name": "Bike Station",
+      "link": "http://www.bikestationaptos.com/"
     }
-  ]
+  }, {
+    "date": "8/27/16",
+    "rides": [{
+      "distance": 15,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_2_-_Bike_Bicycle_Trip_-_15_Mile_Route.pdf"
+    }, {
+      "distance": 30,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_2_-_Bicycle_Trip_-_30_Mile_Route.pdf"
+    }],
+    "location": {
+      "name": "The Bicycle Trip",
+      "link": "http://www.bicycletrip.com/"
+    }
+  }, {
+    "date": "9/3/16",
+    "rides": [{
+      "distance": 23,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_3_-_Epicenter_-_23_Mile_Route.pdf"
+    }, {
+      "distance": 37,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_3_-_Epicenter_-_37_Mile_Route.pdf"
+    }],
+    "location": {
+      "name": "Epicenter (Santa Cruz)",
+      "link": "http://epicentercycling.com/"
+    }
+  }, {
+    "date": "9/10/16",
+    "rides": [{
+      "distance": 26,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_4_-_SV_Cycle_Sport_-_26_Mile_Route.pdf"
+    }, {
+      "distance": 37,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_4_-_SV_Cycle_Sport_-_37_Mile_Route.pdf"
+    }],
+    "location": {
+      "name": "Scotts Valley Cycle Sport",
+      "link": "http://www.svcyclesport.com/"
+    }
+  }, {
+    "date": "9/17/16",
+    "rides": [{
+      "distance": 30,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_5_-_Family_Cycling_-_30_Mile_Route.pdf"
+    }, {
+      "distance": 50,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_5_-_Family_Cycling_-_50_Mile_Route.pdf"
+    }],
+    "location": {
+      "name": "Family Cycling Center",
+      "link": "http://www.familycycling.com/"
+    }
+  }, {
+    "date": "9/24/16",
+    "rides": [{
+      "distance": 11,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_6_-_Epicenter_-11_Mile_Route.pdf"
+    }, {
+      "distance": 40,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_6_-_Epicenter_-40_Mile_Route.pdf"
+    }, {
+      "distance": 60,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_6_-_Epicenter_-60_Mile_Route.pdf"
+    }],
+    "location": {
+      "name": "Epicenter (Aptos)",
+      "link": "http://epicentercycling.com/"
+    }
+  }, {
+    "date": "10/1/16*",
+    "rides": [{
+      "distance": 20,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_7-20_Mile"
+    }, {
+      "distance": 50,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_7-50_Mile"
+    }, {
+      "distance": 70,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_7-70_Mile"
+    }],
+    "location": {
+      "name": "Spokesman Bicycles",
+      "link": "http://spokesmanbicycles.com/"
+    }
+  }]
 }

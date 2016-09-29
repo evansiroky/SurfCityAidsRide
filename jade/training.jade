@@ -1,7 +1,18 @@
 mixin trainingDay(cfg)
   tr
     td= cfg.date
-    td= cfg.distances
+    td
+      - var n = 0, ride
+      while n < cfg.rides.length
+        - ride = cfg.rides[n]
+        a(href=ride.sheet) #{ride.distance}
+        - n++
+        if n == cfg.rides.length
+          |  miles
+        if n == cfg.rides.length - 1
+          |  or 
+        if n < cfg.rides.length - 1
+          | , 
     td 
       a(href=cfg.location.link)= cfg.location.name
 
@@ -62,6 +73,3 @@ block content
     p Surf City AIDS Ride registrants get a special $10 deal for drop-in Spin classes on Tuesday and Thursday nights at 6:00pm at 
       a(href='http://www.toadalfitness.com/class-schedule-image/downtown-class-schedule') Toadal Fitness Downtown
       |  with instructor Paul Howell.  To make an appointment call 831-423-3764 and ask for Lora or Travis.  Be sure to mention you are registered for the Surf City AIDS Ride and be prepared to show your confirmation email.
-
-
-
