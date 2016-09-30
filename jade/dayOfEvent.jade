@@ -3,10 +3,13 @@ mixin routeHTML(cfg, stations, routeId)
   h4(id='route' + cfg.miles)= cfg.miles + ' Mile'
   h5= cfg.summary
   .row
-    .col-xs-12.col-md-6.text-xs-center
+    .col-xs-12.col-md-6.text-xs-center.route-map-container
       a(href=cfg.gpsLink)
         img.route-img(src='assets/' + cfg.miles +'-profile.jpg' alt=cfg.miles + ' Mile Route Elevation Profile')
-      a(href=cfg.gpsLink) View Full Route
+      p
+        a(href=cfg.gpsLink) View Full Route
+      p
+        a(href='assets/routesheets/2016-SCAR-' + cfg.miles + '-mile.pdf') View Route Sheet
     .col-xs-12.col-md-6
       p= cfg.description
       table
