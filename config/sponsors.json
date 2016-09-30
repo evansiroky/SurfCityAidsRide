@@ -60,6 +60,14 @@
       "name": "Santa Cruz Bodywork",
       "url": "http://www.santacruzbodywork.com/",
       "img": "santacruzbodywork.png"
+    }, {
+      "name": "Clutch Couriers",
+      "url": "http://www.clutchcouriers.com/",
+      "img": "ClutchCourier.png"
+    }, {
+      "name": "Pacific Cookie Company",
+      "url": "http://www.pacificcookie.com/",
+      "img": "pacific_cookie.JPG"
     }
   ]
 }
