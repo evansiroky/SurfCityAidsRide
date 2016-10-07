@@ -67,7 +67,9 @@ function getFundraisersByType($type) {
               break;
             case 1:
               $entity['name'] = $text;
-              $entity['link'] = $cell->childNodes->item(1)->childNodes->item(1)->getAttribute('href');
+              if ($cell->childNodes->item(1)->childNodes->item(1)) {
+                $entity['link'] = $cell->childNodes->item(1)->childNodes->item(1)->getAttribute('href');
+              }
               break;
             case 2:
               $entity['numDonors'] = $text;
