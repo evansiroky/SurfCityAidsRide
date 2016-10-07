@@ -83,14 +83,14 @@
   }, {
     "date": "10/1/16*",
     "rides": [{
-      "distance": 20,
-      "sheet": "assets/2016_Training_Ride_Routes/Week_7-20_Mile"
+      "distance": 24,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_7_-_Spokesman_-24_Mile_Route.pdf"
     }, {
-      "distance": 50,
-      "sheet": "assets/2016_Training_Ride_Routes/Week_7-50_Mile"
+      "distance": 52,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_7_-_Spokesman_-52_Mile_Route.pdf"
     }, {
-      "distance": 70,
-      "sheet": "assets/2016_Training_Ride_Routes/Week_7-70_Mile"
+      "distance": 71,
+      "sheet": "assets/2016_Training_Ride_Routes/Week_7_-_Spokesman_-71_Mile_Route.pdf"
     }],
     "location": {
       "name": "Spokesman Bicycles",
