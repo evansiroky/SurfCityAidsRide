@@ -3,10 +3,12 @@ extends layout.jade
 block pageHeader
   h1 Surf City AIDS Ride
   h2 Sunday October 9th 2016
+  h4 Santa Cruz California 
   .row.text-xs-center
-    .col-xs-12
-      a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Register Now!
-  h4 Santa Cruz California    
+    .col-sm-3
+    #reg-closed.col-xs-12.col-sm-6.alert.alert-info
+      p Online Registration is closed!  
+      small You can still register at the start of the ride.
 
 block content
   .photo-credit.col-xs-12
@@ -25,7 +27,6 @@ block content
           .card-block
             p.card-text All rides start at the Santa Cruz County Courthouse.  Registration closes at the start of each ride.
             p.card-text Choose a route: 12, 30, 65 or 100 miles!
-            a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Register Now!
             a.btn.btn-primary(href='dayOfEvent.html') Learn More
             a.btn.btn-primary(href='dayOfEvent.html#routes') View Routes
     
@@ -55,7 +56,6 @@ block content
             img(src='assets/jerseys.jpg' alt='Fundraising')
           .card-block
             p.card-text Your support helps to fund services for men, women and children who are HIV positive, as well as prevention and education programs.  Donate today and make a difference!
-            a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/register') Register Now!
             a.btn.btn-primary(href='http://encompasscs.donorpages.com/SurfCityAIDSRide2016/login') Login
             a.btn.btn-primary(href='http://weblink.donorperfect.com/surfcityaidsridedonation') General Donation
             a.btn.btn-primary(href='fundraising.html') Learn More
